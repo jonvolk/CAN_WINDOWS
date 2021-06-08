@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccd7kvZu.s 			page 1
+ARM GAS  /tmp/ccyhWmXv.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
   45              	.L2:
   12:Core/Src/can_setup.c ****     {
   13:Core/Src/can_setup.c ****         Error_Handler();
-ARM GAS  /tmp/ccd7kvZu.s 			page 2
+ARM GAS  /tmp/ccyhWmXv.s 			page 2
 
 
   14:Core/Src/can_setup.c ****     }
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
   90              		.cfi_offset 14, -4
   25:Core/Src/can_setup.c **** 
   26:Core/Src/can_setup.c ****     txMsg.IDE = CAN_ID_STD;
-ARM GAS  /tmp/ccd7kvZu.s 			page 3
+ARM GAS  /tmp/ccyhWmXv.s 			page 3
 
 
   91              		.loc 1 26 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
   42:Core/Src/can_setup.c ****     {
   43:Core/Src/can_setup.c ****         Error_Handler();
   44:Core/Src/can_setup.c ****     }
-ARM GAS  /tmp/ccd7kvZu.s 			page 4
+ARM GAS  /tmp/ccyhWmXv.s 			page 4
 
 
   45:Core/Src/can_setup.c ****     /*
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
  155              		.loc 1 43 0
  156 005c FFF7FEFF 		bl	Error_Handler
  157              	.LVL10:
-ARM GAS  /tmp/ccd7kvZu.s 			page 5
+ARM GAS  /tmp/ccyhWmXv.s 			page 5
 
 
  158 0060 EAE7     		b	.L8
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
  205 000a FFF7FEFF 		bl	HAL_CAN_AddTxMessage
  206              	.LVL16:
   80:Core/Src/can_setup.c ****     txCycle++;
-ARM GAS  /tmp/ccd7kvZu.s 			page 6
+ARM GAS  /tmp/ccyhWmXv.s 			page 6
 
 
  207              		.loc 1 80 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
  254              		.cfi_def_cfa_offset 8
  255              		.cfi_offset 3, -8
  256              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccd7kvZu.s 			page 7
+ARM GAS  /tmp/ccyhWmXv.s 			page 7
 
 
   90:Core/Src/can_setup.c **** 
@@ -408,67 +408,63 @@ ARM GAS  /tmp/ccd7kvZu.s 			page 1
  292 0034 00000000 		.word	txCycle
  293              		.cfi_endproc
  294              	.LFE69:
- 296              		.comm	canDebug,4,4
- 297              		.comm	txCycle,4,4
- 298              		.comm	busCount,4,4
- 299              		.comm	canTx,8,4
- 300              		.comm	canMailbox,4,4
- 301              		.comm	canRx,8,4
- 302              		.comm	txMsgExt,24,4
- 303              		.comm	txMsg,24,4
- 304              		.comm	rxMsg,28,4
- 305              		.comm	event,40,4
-ARM GAS  /tmp/ccd7kvZu.s 			page 8
+ 296              		.comm	txCycle,4,4
+ 297              		.comm	canTx,8,4
+ 298              		.comm	canMailbox,4,4
+ 299              		.comm	canRx,8,4
+ 300              		.comm	txMsgExt,24,4
+ 301              		.comm	txMsg,24,4
+ 302              		.comm	rxMsg,28,4
+ 303              		.comm	event,40,4
+ 304              		.comm	data,40,4
+ 305              		.comm	hcan,40,4
+ARM GAS  /tmp/ccyhWmXv.s 			page 8
 
 
- 306              		.comm	data,40,4
- 307              		.comm	hcan,40,4
- 308              		.comm	te,10,4
- 309              		.text
- 310              	.Letext0:
- 311              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 312              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 313              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 314              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 315              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 316              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 317              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 318              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
- 319              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 320              		.file 11 "/usr/include/newlib/sys/lock.h"
- 321              		.file 12 "/usr/include/newlib/sys/_types.h"
- 322              		.file 13 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 323              		.file 14 "/usr/include/newlib/sys/reent.h"
- 324              		.file 15 "Core/Inc/encoder.h"
- 325              		.file 16 "Core/Inc/can_setup.h"
- 326              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
- 327              		.file 18 "Core/Inc/main.h"
-ARM GAS  /tmp/ccd7kvZu.s 			page 9
+ 306              		.comm	te,10,4
+ 307              		.text
+ 308              	.Letext0:
+ 309              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 310              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 311              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 312              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 313              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 314              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 315              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 316              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 317              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 318              		.file 11 "/usr/include/newlib/sys/lock.h"
+ 319              		.file 12 "/usr/include/newlib/sys/_types.h"
+ 320              		.file 13 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 321              		.file 14 "/usr/include/newlib/sys/reent.h"
+ 322              		.file 15 "Core/Inc/encoder.h"
+ 323              		.file 16 "Core/Inc/can_setup.h"
+ 324              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 325              		.file 18 "Core/Inc/main.h"
+ARM GAS  /tmp/ccyhWmXv.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 can_setup.c
-     /tmp/ccd7kvZu.s:16     .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 $t
-     /tmp/ccd7kvZu.s:23     .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo0MsgPendingCallback
-     /tmp/ccd7kvZu.s:67     .text.HAL_CAN_RxFifo0MsgPendingCallback:000000000000002c $d
+     /tmp/ccyhWmXv.s:16     .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 $t
+     /tmp/ccyhWmXv.s:23     .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo0MsgPendingCallback
+     /tmp/ccyhWmXv.s:67     .text.HAL_CAN_RxFifo0MsgPendingCallback:000000000000002c $d
                             *COM*:0000000000000008 canRx
                             *COM*:000000000000001c rxMsg
-     /tmp/ccd7kvZu.s:73     .text.canSettings:0000000000000000 $t
-     /tmp/ccd7kvZu.s:80     .text.canSettings:0000000000000000 canSettings
-     /tmp/ccd7kvZu.s:172    .text.canSettings:0000000000000070 $d
+     /tmp/ccyhWmXv.s:73     .text.canSettings:0000000000000000 $t
+     /tmp/ccyhWmXv.s:80     .text.canSettings:0000000000000000 canSettings
+     /tmp/ccyhWmXv.s:172    .text.canSettings:0000000000000070 $d
                             *COM*:0000000000000018 txMsg
                             *COM*:0000000000000028 data
                             *COM*:0000000000000028 hcan
-     /tmp/ccd7kvZu.s:179    .text.tx:0000000000000000 $t
-     /tmp/ccd7kvZu.s:186    .text.tx:0000000000000000 tx
-     /tmp/ccd7kvZu.s:231    .text.tx:000000000000002c $d
+     /tmp/ccyhWmXv.s:179    .text.tx:0000000000000000 $t
+     /tmp/ccyhWmXv.s:186    .text.tx:0000000000000000 tx
+     /tmp/ccyhWmXv.s:231    .text.tx:000000000000002c $d
                             *COM*:0000000000000004 canMailbox
                             *COM*:0000000000000004 txCycle
-     /tmp/ccd7kvZu.s:238    .text.txExt:0000000000000000 $t
-     /tmp/ccd7kvZu.s:245    .text.txExt:0000000000000000 txExt
-     /tmp/ccd7kvZu.s:290    .text.txExt:000000000000002c $d
-                            *COM*:0000000000000004 canDebug
-                            *COM*:0000000000000004 busCount
+     /tmp/ccyhWmXv.s:238    .text.txExt:0000000000000000 $t
+     /tmp/ccyhWmXv.s:245    .text.txExt:0000000000000000 txExt
+     /tmp/ccyhWmXv.s:290    .text.txExt:000000000000002c $d
                             *COM*:0000000000000008 canTx
                             *COM*:0000000000000018 txMsgExt
                             *COM*:0000000000000028 event

@@ -34,13 +34,11 @@ hadc1               0x30              build/main.o
 te                  0xa               build/can_setup.o
 txMsg               0x18              build/can_setup.o
 canMailbox          0x4               build/can_setup.o
-busCount            0x4               build/can_setup.o
 hdma_adc1           0x44              build/main.o
 stageNextState      0x1               build/main.o
 data                0x28              build/can_setup.o
 event               0x28              build/can_setup.o
 txMsgExt            0x18              build/can_setup.o
-canDebug            0x4               build/can_setup.o
 txCycle             0x4               build/can_setup.o
 window              0x28              build/main.o
 canRx               0x8               build/can_setup.o
@@ -1420,51 +1418,49 @@ LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
  .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
                 0x000000002000043c                . = ALIGN (0x4)
 
-.bss            0x000000002000043c      0x21c load address 0x0000000008002f20
+.bss            0x000000002000043c      0x214 load address 0x0000000008002f20
                 0x000000002000043c                _sbss = .
                 0x000000002000043c                __bss_start__ = _sbss
  *(.bss)
  .bss           0x000000002000043c       0x1c /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x0000000020000458       0xf0 build/can_setup.o
+ COMMON         0x0000000020000458       0xe8 build/can_setup.o
                 0x0000000020000458                canTx
                 0x0000000020000460                rxMsg
                 0x000000002000047c                hcan
                 0x00000000200004a4                te
                 0x00000000200004b0                txMsg
                 0x00000000200004c8                canMailbox
-                0x00000000200004cc                busCount
-                0x00000000200004d0                data
-                0x00000000200004f8                event
-                0x0000000020000520                txMsgExt
-                0x0000000020000538                canDebug
-                0x000000002000053c                txCycle
-                0x0000000020000540                canRx
- COMMON         0x0000000020000548      0x10c build/main.o
-                0x0000000020000548                motorCurrent
-                0x0000000020000568                htim4
-                0x00000000200005b0                stageState
-                0x00000000200005b4                hadc1
-                0x00000000200005e4                hdma_adc1
-                0x0000000020000628                stageNextState
-                0x000000002000062c                window
- COMMON         0x0000000020000654        0x4 build/stm32f1xx_hal.o
-                0x0000000020000654                uwTick
-                0x0000000020000658                . = ALIGN (0x4)
-                0x0000000020000658                _ebss = .
-                0x0000000020000658                __bss_end__ = _ebss
+                0x00000000200004cc                data
+                0x00000000200004f4                event
+                0x000000002000051c                txMsgExt
+                0x0000000020000534                txCycle
+                0x0000000020000538                canRx
+ COMMON         0x0000000020000540      0x10c build/main.o
+                0x0000000020000540                motorCurrent
+                0x0000000020000560                htim4
+                0x00000000200005a8                stageState
+                0x00000000200005ac                hadc1
+                0x00000000200005dc                hdma_adc1
+                0x0000000020000620                stageNextState
+                0x0000000020000624                window
+ COMMON         0x000000002000064c        0x4 build/stm32f1xx_hal.o
+                0x000000002000064c                uwTick
+                0x0000000020000650                . = ALIGN (0x4)
+                0x0000000020000650                _ebss = .
+                0x0000000020000650                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000658      0x600 load address 0x0000000008002f20
-                0x0000000020000658                . = ALIGN (0x8)
+                0x0000000020000650      0x600 load address 0x0000000008002f20
+                0x0000000020000650                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
-                0x0000000020000858                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000658      0x200 
-                0x0000000020000c58                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000858      0x400 
-                0x0000000020000c58                . = ALIGN (0x8)
+                0x0000000020000850                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000650      0x200 
+                0x0000000020000c50                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000850      0x400 
+                0x0000000020000c50                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -1563,32 +1559,32 @@ OUTPUT(build/CAN_WINDOWS.elf elf32-littlearm)
  .comment       0x0000000000000031       0x32 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
  .comment       0x0000000000000031       0x32 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
 
-.debug_info     0x0000000000000000    0x16293
- .debug_info    0x0000000000000000     0x15d4 build/can_setup.o
- .debug_info    0x00000000000015d4     0x129f build/encoder.o
- .debug_info    0x0000000000002873     0x25d8 build/main.o
- .debug_info    0x0000000000004e4b     0x145b build/stm32f1xx_hal_msp.o
- .debug_info    0x00000000000062a6      0xc9b build/stm32f1xx_it.o
- .debug_info    0x0000000000006f41      0x2cc build/system_stm32f1xx.o
- .debug_info    0x000000000000720d     0x17dc build/window.o
- .debug_info    0x00000000000089e9      0x873 build/stm32f1xx_hal.o
- .debug_info    0x000000000000925c      0xf78 build/stm32f1xx_hal_adc.o
- .debug_info    0x000000000000a1d4     0x1265 build/stm32f1xx_hal_can.o
- .debug_info    0x000000000000b439      0xd67 build/stm32f1xx_hal_cortex.o
- .debug_info    0x000000000000c1a0      0x8c7 build/stm32f1xx_hal_dma.o
- .debug_info    0x000000000000ca67      0x721 build/stm32f1xx_hal_gpio.o
- .debug_info    0x000000000000d188      0xaaa build/stm32f1xx_hal_rcc.o
- .debug_info    0x000000000000dc32      0x4da build/stm32f1xx_hal_rcc_ex.o
- .debug_info    0x000000000000e10c     0x3846 build/stm32f1xx_hal_tim.o
- .debug_info    0x0000000000011952     0x190e build/stm32f1xx_hal_tim_ex.o
- .debug_info    0x0000000000013260       0x56 build/startup_stm32f103xb.o
- .debug_info    0x00000000000132b6      0x907 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
- .debug_info    0x0000000000013bbd       0xfa /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
- .debug_info    0x0000000000013cb7      0x8a5 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
- .debug_info    0x000000000001455c      0x110 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
- .debug_info    0x000000000001466c      0x91b /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
- .debug_info    0x0000000000014f87      0x950 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
- .debug_info    0x00000000000158d7      0x9bc /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+.debug_info     0x0000000000000000    0x16203
+ .debug_info    0x0000000000000000     0x15b0 build/can_setup.o
+ .debug_info    0x00000000000015b0     0x127b build/encoder.o
+ .debug_info    0x000000000000282b     0x25b4 build/main.o
+ .debug_info    0x0000000000004ddf     0x145b build/stm32f1xx_hal_msp.o
+ .debug_info    0x000000000000623a      0xc9b build/stm32f1xx_it.o
+ .debug_info    0x0000000000006ed5      0x2cc build/system_stm32f1xx.o
+ .debug_info    0x00000000000071a1     0x17b8 build/window.o
+ .debug_info    0x0000000000008959      0x873 build/stm32f1xx_hal.o
+ .debug_info    0x00000000000091cc      0xf78 build/stm32f1xx_hal_adc.o
+ .debug_info    0x000000000000a144     0x1265 build/stm32f1xx_hal_can.o
+ .debug_info    0x000000000000b3a9      0xd67 build/stm32f1xx_hal_cortex.o
+ .debug_info    0x000000000000c110      0x8c7 build/stm32f1xx_hal_dma.o
+ .debug_info    0x000000000000c9d7      0x721 build/stm32f1xx_hal_gpio.o
+ .debug_info    0x000000000000d0f8      0xaaa build/stm32f1xx_hal_rcc.o
+ .debug_info    0x000000000000dba2      0x4da build/stm32f1xx_hal_rcc_ex.o
+ .debug_info    0x000000000000e07c     0x3846 build/stm32f1xx_hal_tim.o
+ .debug_info    0x00000000000118c2     0x190e build/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x00000000000131d0       0x56 build/startup_stm32f103xb.o
+ .debug_info    0x0000000000013226      0x907 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .debug_info    0x0000000000013b2d       0xfa /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .debug_info    0x0000000000013c27      0x8a5 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .debug_info    0x00000000000144cc      0x110 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .debug_info    0x00000000000145dc      0x91b /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .debug_info    0x0000000000014ef7      0x950 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000015847      0x9bc /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
 
 .debug_abbrev   0x0000000000000000     0x3218
  .debug_abbrev  0x0000000000000000      0x266 build/can_setup.o
@@ -1742,54 +1738,54 @@ OUTPUT(build/CAN_WINDOWS.elf elf32-littlearm)
  .debug_line    0x00000000000065b2      0x18f /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
  .debug_line    0x0000000000006741      0x1b3 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
 
-.debug_str      0x0000000000000000     0x4505
- .debug_str     0x0000000000000000      0xd64 build/can_setup.o
-                                        0xe3d (size before relaxing)
- .debug_str     0x0000000000000d64       0x34 build/encoder.o
-                                        0xa8f (size before relaxing)
- .debug_str     0x0000000000000d98      0xa56 build/main.o
-                                       0x183f (size before relaxing)
- .debug_str     0x00000000000017ee      0x10c build/stm32f1xx_hal_msp.o
+.debug_str      0x0000000000000000     0x44f3
+ .debug_str     0x0000000000000000      0xd52 build/can_setup.o
+                                        0xe2b (size before relaxing)
+ .debug_str     0x0000000000000d52       0x34 build/encoder.o
+                                        0xa7d (size before relaxing)
+ .debug_str     0x0000000000000d86      0xa56 build/main.o
+                                       0x182d (size before relaxing)
+ .debug_str     0x00000000000017dc      0x10c build/stm32f1xx_hal_msp.o
                                         0xf33 (size before relaxing)
- .debug_str     0x00000000000018fa      0x131 build/stm32f1xx_it.o
+ .debug_str     0x00000000000018e8      0x131 build/stm32f1xx_it.o
                                         0xa74 (size before relaxing)
- .debug_str     0x0000000000001a2b       0x4f build/system_stm32f1xx.o
+ .debug_str     0x0000000000001a19       0x4f build/system_stm32f1xx.o
                                         0x2a1 (size before relaxing)
- .debug_str     0x0000000000001a7a       0x80 build/window.o
-                                        0xb85 (size before relaxing)
- .debug_str     0x0000000000001afa      0x280 build/stm32f1xx_hal.o
+ .debug_str     0x0000000000001a68       0x80 build/window.o
+                                        0xb73 (size before relaxing)
+ .debug_str     0x0000000000001ae8      0x280 build/stm32f1xx_hal.o
                                         0x81e (size before relaxing)
- .debug_str     0x0000000000001d7a      0x326 build/stm32f1xx_hal_adc.o
+ .debug_str     0x0000000000001d68      0x326 build/stm32f1xx_hal_adc.o
                                         0x93c (size before relaxing)
- .debug_str     0x00000000000020a0      0x3ba build/stm32f1xx_hal_can.o
+ .debug_str     0x000000000000208e      0x3ba build/stm32f1xx_hal_can.o
                                         0xab7 (size before relaxing)
- .debug_str     0x000000000000245a      0x369 build/stm32f1xx_hal_cortex.o
+ .debug_str     0x0000000000002448      0x369 build/stm32f1xx_hal_cortex.o
                                         0x93a (size before relaxing)
- .debug_str     0x00000000000027c3      0x1e4 build/stm32f1xx_hal_dma.o
+ .debug_str     0x00000000000027b1      0x1e4 build/stm32f1xx_hal_dma.o
                                         0x688 (size before relaxing)
- .debug_str     0x00000000000029a7      0x112 build/stm32f1xx_hal_gpio.o
+ .debug_str     0x0000000000002995      0x112 build/stm32f1xx_hal_gpio.o
                                         0x48b (size before relaxing)
- .debug_str     0x0000000000002ab9      0x1e2 build/stm32f1xx_hal_rcc.o
+ .debug_str     0x0000000000002aa7      0x1e2 build/stm32f1xx_hal_rcc.o
                                         0x66d (size before relaxing)
- .debug_str     0x0000000000002c9b       0x81 build/stm32f1xx_hal_rcc_ex.o
+ .debug_str     0x0000000000002c89       0x81 build/stm32f1xx_hal_rcc_ex.o
                                         0x44c (size before relaxing)
- .debug_str     0x0000000000002d1c      0xe28 build/stm32f1xx_hal_tim.o
+ .debug_str     0x0000000000002d0a      0xe28 build/stm32f1xx_hal_tim.o
                                        0x16c3 (size before relaxing)
- .debug_str     0x0000000000003b44      0x54a build/stm32f1xx_hal_tim_ex.o
+ .debug_str     0x0000000000003b32      0x54a build/stm32f1xx_hal_tim_ex.o
                                         0xeed (size before relaxing)
- .debug_str     0x000000000000408e      0x135 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .debug_str     0x000000000000407c      0x135 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
                                         0x5af (size before relaxing)
- .debug_str     0x00000000000041c3       0xbe /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .debug_str     0x00000000000041b1       0xbe /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
                                         0x1c8 (size before relaxing)
- .debug_str     0x0000000000004281       0x98 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .debug_str     0x000000000000426f       0x98 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
                                         0x564 (size before relaxing)
- .debug_str     0x0000000000004319       0x93 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .debug_str     0x0000000000004307       0x93 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
                                         0x1f2 (size before relaxing)
- .debug_str     0x00000000000043ac       0xa2 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .debug_str     0x000000000000439a       0xa2 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
                                         0x57c (size before relaxing)
- .debug_str     0x000000000000444e       0x41 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .debug_str     0x000000000000443c       0x41 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
                                         0x5c9 (size before relaxing)
- .debug_str     0x000000000000448f       0x76 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x000000000000447d       0x76 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
                                         0x5da (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x25bc
@@ -2365,14 +2361,6 @@ _start                                            /usr/lib/gcc/arm-none-eabi/6.3
 atexit                                            /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
                                                   /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
                                                   /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
-busCount                                          build/window.o
-                                                  build/main.o
-                                                  build/encoder.o
-                                                  build/can_setup.o
-canDebug                                          build/window.o
-                                                  build/main.o
-                                                  build/encoder.o
-                                                  build/can_setup.o
 canMailbox                                        build/window.o
                                                   build/main.o
                                                   build/encoder.o

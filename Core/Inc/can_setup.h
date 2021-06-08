@@ -2,9 +2,6 @@
 #ifndef __CAN_SETUP_H
 #define __CAN_SETUP_H
 
-#define SINGLE 1
-#define DUAL 2
-
 #include "stm32f1xx_hal.h"
 #include "main.h"
 #include "stdio.h"
@@ -24,15 +21,11 @@ uint32_t canMailbox; //CAN Bus Mail box variable
 
 uint8_t canTx[8];
 
-int busCount; // SINGLE or DUAL
 int txCycle;  //CAN TX counter
-int canDebug;
+
 
 void canSettings(void);
-
 void tx(CAN_TxHeaderTypeDef *txMsg, uint8_t *canTx);
 void txExt(CAN_TxHeaderTypeDef *txMsgExt, uint8_t *canTx);
-void processCAN(void);
-void canTxDelay(void);
 
 #endif

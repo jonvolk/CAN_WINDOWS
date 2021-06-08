@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccut8x0u.s 			page 1
+ARM GAS  /tmp/ccdWyVRv.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
   47              		.loc 1 9 0
   48 0012 5870     		strb	r0, [r3, #1]
   10:Core/Src/encoder.c ****     canTx[2] = valueId;
-ARM GAS  /tmp/ccut8x0u.s 			page 2
+ARM GAS  /tmp/ccdWyVRv.s 			page 2
 
 
   49              		.loc 1 10 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
   95              		.cfi_startproc
   96              		@ args = 0, pretend = 0, frame = 0
   97              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccut8x0u.s 			page 3
+ARM GAS  /tmp/ccdWyVRv.s 			page 3
 
 
   98              	.LVL5:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
  141 0034 00000000 		.word	canTx
  142 0038 00000000 		.word	txMsgExt
  143              		.cfi_endproc
-ARM GAS  /tmp/ccut8x0u.s 			page 4
+ARM GAS  /tmp/ccdWyVRv.s 			page 4
 
 
  144              	.LFE67:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
  187 0020 1A71     		strb	r2, [r3, #4]
   45:Core/Src/encoder.c ****     }
   46:Core/Src/encoder.c **** }
-ARM GAS  /tmp/ccut8x0u.s 			page 5
+ARM GAS  /tmp/ccdWyVRv.s 			page 5
 
 
  188              		.loc 1 46 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
  235 0018 02EB0022 		add	r2, r2, r0, lsl #8
  236 001c DA80     		strh	r2, [r3, #6]	@ movhi
   56:Core/Src/encoder.c ****         te.dispCode = canRx[5];
-ARM GAS  /tmp/ccut8x0u.s 			page 6
+ARM GAS  /tmp/ccdWyVRv.s 			page 6
 
 
  237              		.loc 1 56 0
@@ -320,58 +320,54 @@ ARM GAS  /tmp/ccut8x0u.s 			page 1
  250              		.cfi_endproc
  251              	.LFE69:
  253              		.comm	te,10,4
- 254              		.comm	canDebug,4,4
- 255              		.comm	txCycle,4,4
- 256              		.comm	busCount,4,4
- 257              		.comm	canTx,8,4
- 258              		.comm	canMailbox,4,4
- 259              		.comm	canRx,8,4
- 260              		.comm	txMsgExt,24,4
- 261              		.comm	txMsg,24,4
- 262              		.comm	rxMsg,28,4
- 263              		.comm	event,40,4
- 264              		.comm	data,40,4
- 265              		.comm	hcan,40,4
- 266              		.text
- 267              	.Letext0:
- 268              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 269              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 270              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 271              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 272              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 273              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 274              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
- 275              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 276              		.file 10 "/usr/include/newlib/sys/lock.h"
- 277              		.file 11 "/usr/include/newlib/sys/_types.h"
- 278              		.file 12 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 279              		.file 13 "/usr/include/newlib/sys/reent.h"
- 280              		.file 14 "Core/Inc/can_setup.h"
- 281              		.file 15 "Core/Inc/encoder.h"
-ARM GAS  /tmp/ccut8x0u.s 			page 7
+ 254              		.comm	txCycle,4,4
+ 255              		.comm	canTx,8,4
+ 256              		.comm	canMailbox,4,4
+ 257              		.comm	canRx,8,4
+ 258              		.comm	txMsgExt,24,4
+ 259              		.comm	txMsg,24,4
+ 260              		.comm	rxMsg,28,4
+ 261              		.comm	event,40,4
+ 262              		.comm	data,40,4
+ 263              		.comm	hcan,40,4
+ 264              		.text
+ 265              	.Letext0:
+ 266              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 267              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 268              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 269              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 270              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 271              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 272              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 273              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 274              		.file 10 "/usr/include/newlib/sys/lock.h"
+ 275              		.file 11 "/usr/include/newlib/sys/_types.h"
+ 276              		.file 12 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 277              		.file 13 "/usr/include/newlib/sys/reent.h"
+ 278              		.file 14 "Core/Inc/can_setup.h"
+ 279              		.file 15 "Core/Inc/encoder.h"
+ARM GAS  /tmp/ccdWyVRv.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 encoder.c
-     /tmp/ccut8x0u.s:16     .text.setWidget:0000000000000000 $t
-     /tmp/ccut8x0u.s:23     .text.setWidget:0000000000000000 setWidget
-     /tmp/ccut8x0u.s:76     .text.setWidget:0000000000000030 $d
+     /tmp/ccdWyVRv.s:16     .text.setWidget:0000000000000000 $t
+     /tmp/ccdWyVRv.s:23     .text.setWidget:0000000000000000 setWidget
+     /tmp/ccdWyVRv.s:76     .text.setWidget:0000000000000030 $d
                             *COM*:0000000000000018 txMsg
                             *COM*:0000000000000008 canTx
                             *COM*:000000000000000a te
                             *COM*:0000000000000018 txMsgExt
-     /tmp/ccut8x0u.s:85     .text.setBacklight:0000000000000000 $t
-     /tmp/ccut8x0u.s:92     .text.setBacklight:0000000000000000 setBacklight
-     /tmp/ccut8x0u.s:139    .text.setBacklight:000000000000002c $d
-     /tmp/ccut8x0u.s:147    .text.getEvent:0000000000000000 $t
-     /tmp/ccut8x0u.s:154    .text.getEvent:0000000000000000 getEvent
-     /tmp/ccut8x0u.s:193    .text.getEvent:0000000000000024 $d
-     /tmp/ccut8x0u.s:199    .text.getData:0000000000000000 $t
-     /tmp/ccut8x0u.s:206    .text.getData:0000000000000000 getData
-     /tmp/ccut8x0u.s:248    .text.getData:0000000000000028 $d
-                            *COM*:0000000000000004 canDebug
+     /tmp/ccdWyVRv.s:85     .text.setBacklight:0000000000000000 $t
+     /tmp/ccdWyVRv.s:92     .text.setBacklight:0000000000000000 setBacklight
+     /tmp/ccdWyVRv.s:139    .text.setBacklight:000000000000002c $d
+     /tmp/ccdWyVRv.s:147    .text.getEvent:0000000000000000 $t
+     /tmp/ccdWyVRv.s:154    .text.getEvent:0000000000000000 getEvent
+     /tmp/ccdWyVRv.s:193    .text.getEvent:0000000000000024 $d
+     /tmp/ccdWyVRv.s:199    .text.getData:0000000000000000 $t
+     /tmp/ccdWyVRv.s:206    .text.getData:0000000000000000 getData
+     /tmp/ccdWyVRv.s:248    .text.getData:0000000000000028 $d
                             *COM*:0000000000000004 txCycle
-                            *COM*:0000000000000004 busCount
                             *COM*:0000000000000004 canMailbox
                             *COM*:0000000000000008 canRx
                             *COM*:000000000000001c rxMsg

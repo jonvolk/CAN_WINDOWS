@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccviwRRs.s 			page 1
+ARM GAS  /tmp/cc2F5V2v.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
   47 0008 164C     		ldr	r4, .L14
   48 000a 8B00     		lsls	r3, r1, #2
   49 000c 0B44     		add	r3, r3, r1
-ARM GAS  /tmp/ccviwRRs.s 			page 2
+ARM GAS  /tmp/cc2F5V2v.s 			page 2
 
 
   50 000e 5800     		lsls	r0, r3, #1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
   90 003a 0C4A     		ldr	r2, .L14+8
   91 003c 1370     		strb	r3, [r2]
   20:Core/Src/window.c ****     stageNextState = 0;
-ARM GAS  /tmp/ccviwRRs.s 			page 3
+ARM GAS  /tmp/cc2F5V2v.s 			page 3
 
 
   92              		.loc 1 20 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  142              		.global	stateHandler
  143              		.syntax unified
  144              		.thumb
-ARM GAS  /tmp/ccviwRRs.s 			page 4
+ARM GAS  /tmp/cc2F5V2v.s 			page 4
 
 
  145              		.thumb_func
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  178              		.loc 1 43 0
  179 0020 D269     		ldr	r2, [r2, #28]
  180 0022 1A83     		strh	r2, [r3, #24]	@ movhi
-ARM GAS  /tmp/ccviwRRs.s 			page 5
+ARM GAS  /tmp/cc2F5V2v.s 			page 5
 
 
  181              	.LVL10:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  221 0060 E9E7     		b	.L19
  222              	.L25:
  223 0062 0023     		movs	r3, #0
-ARM GAS  /tmp/ccviwRRs.s 			page 6
+ARM GAS  /tmp/cc2F5V2v.s 			page 6
 
 
  224              	.LVL13:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  258 0092 E8E7     		b	.L22
  259              	.L26:
  260              	.LBE8:
-ARM GAS  /tmp/ccviwRRs.s 			page 7
+ARM GAS  /tmp/cc2F5V2v.s 			page 7
 
 
   70:Core/Src/window.c ****         }
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  306 0012 012B     		cmp	r3, #1
  307 0014 0FD0     		beq	.L36
  308 0016 13B1     		cbz	r3, .L37
-ARM GAS  /tmp/ccviwRRs.s 			page 8
+ARM GAS  /tmp/cc2F5V2v.s 			page 8
 
 
  309 0018 022B     		cmp	r3, #2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  352 004e 4C4C     		ldr	r4, .L49
  353 0050 0122     		movs	r2, #1
  354 0052 1146     		mov	r1, r2
-ARM GAS  /tmp/ccviwRRs.s 			page 9
+ARM GAS  /tmp/cc2F5V2v.s 			page 9
 
 
  355              	.LVL28:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  396              	.L39:
  105:Core/Src/window.c ****         case up:
  106:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_U_GPIO_Port, LR_U_Pin, RESET);
-ARM GAS  /tmp/ccviwRRs.s 			page 10
+ARM GAS  /tmp/cc2F5V2v.s 			page 10
 
 
  397              		.loc 1 106 0
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  439 00cc 022B     		cmp	r3, #2
  440 00ce 1AD0     		beq	.L44
  441 00d0 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccviwRRs.s 			page 11
+ARM GAS  /tmp/cc2F5V2v.s 			page 11
 
 
  442              	.L43:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  485              	.LVL58:
  486 010c 2046     		mov	r0, r4
  487              	.LVL59:
-ARM GAS  /tmp/ccviwRRs.s 			page 12
+ARM GAS  /tmp/cc2F5V2v.s 			page 12
 
 
  488 010e FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  527              		.loc 1 144 0
  528 0148 0D4C     		ldr	r4, .L49
  529 014a 0022     		movs	r2, #0
-ARM GAS  /tmp/ccviwRRs.s 			page 13
+ARM GAS  /tmp/cc2F5V2v.s 			page 13
 
 
  530 014c 4FF40051 		mov	r1, #8192
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  151:Core/Src/window.c ****         default:
  152:Core/Src/window.c ****             break;
  153:Core/Src/window.c ****         }
-ARM GAS  /tmp/ccviwRRs.s 			page 14
+ARM GAS  /tmp/cc2F5V2v.s 			page 14
 
 
  154:Core/Src/window.c ****         break;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  197:Core/Src/window.c ****                 break;
  198:Core/Src/window.c ****             default:
  199:Core/Src/window.c ****                 break;
-ARM GAS  /tmp/ccviwRRs.s 			page 15
+ARM GAS  /tmp/cc2F5V2v.s 			page 15
 
 
  200:Core/Src/window.c ****             }
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  602 0018 012B     		cmp	r3, #1
  603 001a F5D1     		bne	.L52
  167:Core/Src/window.c ****         {
-ARM GAS  /tmp/ccviwRRs.s 			page 16
+ARM GAS  /tmp/cc2F5V2v.s 			page 16
 
 
  604              		.loc 1 167 0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  651 0072 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  652 0074 812B     		cmp	r3, #129
  653 0076 06D0     		beq	.L60
-ARM GAS  /tmp/ccviwRRs.s 			page 17
+ARM GAS  /tmp/cc2F5V2v.s 			page 17
 
 
  654 0078 822B     		cmp	r3, #130
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  696 00ac 0D4B     		ldr	r3, .L71
  697 00ae 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  698 00b0 812B     		cmp	r3, #129
-ARM GAS  /tmp/ccviwRRs.s 			page 18
+ARM GAS  /tmp/cc2F5V2v.s 			page 18
 
 
  699 00b2 05D0     		beq	.L64
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  742              	.L71:
  743 00e4 00000000 		.word	te
  744 00e8 00000000 		.word	window
-ARM GAS  /tmp/ccviwRRs.s 			page 19
+ARM GAS  /tmp/cc2F5V2v.s 			page 19
 
 
  745 00ec 00000000 		.word	stageState
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  777 0012 084B     		ldr	r3, .L77+8
  778 0014 0122     		movs	r2, #1
  779 0016 9A72     		strb	r2, [r3, #10]
-ARM GAS  /tmp/ccviwRRs.s 			page 20
+ARM GAS  /tmp/cc2F5V2v.s 			page 20
 
 
  271:Core/Src/window.c ****             window[rr].state = up;
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  803              	.LFE71:
  805              		.section	.text.windowHandler,"ax",%progbits
  806              		.align	1
-ARM GAS  /tmp/ccviwRRs.s 			page 21
+ARM GAS  /tmp/cc2F5V2v.s 			page 21
 
 
  807              		.global	windowHandler
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  854              	.LVL85:
  855 0028 10BD     		pop	{r4, pc}
  856              	.LVL86:
-ARM GAS  /tmp/ccviwRRs.s 			page 22
+ARM GAS  /tmp/cc2F5V2v.s 			page 22
 
 
  857              	.L84:
@@ -1272,71 +1272,67 @@ ARM GAS  /tmp/ccviwRRs.s 			page 1
  866              		.comm	stageState,1,1
  867              		.comm	motorCurrent,32,4
  868              		.comm	te,10,4
- 869              		.comm	canDebug,4,4
- 870              		.comm	txCycle,4,4
- 871              		.comm	busCount,4,4
- 872              		.comm	canTx,8,4
- 873              		.comm	canMailbox,4,4
- 874              		.comm	canRx,8,4
- 875              		.comm	txMsgExt,24,4
- 876              		.comm	txMsg,24,4
- 877              		.comm	rxMsg,28,4
- 878              		.comm	event,40,4
- 879              		.comm	data,40,4
- 880              		.comm	hcan,40,4
- 881              		.text
- 882              	.Letext0:
- 883              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 884              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 885              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 886              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 887              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 888              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 889              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 890              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
- 891              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 892              		.file 11 "/usr/include/newlib/sys/lock.h"
- 893              		.file 12 "/usr/include/newlib/sys/_types.h"
- 894              		.file 13 "/usr/include/newlib/sys/reent.h"
- 895              		.file 14 "Core/Inc/can_setup.h"
- 896              		.file 15 "Core/Inc/encoder.h"
- 897              		.file 16 "Core/Inc/window.h"
- 898              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  /tmp/ccviwRRs.s 			page 23
+ 869              		.comm	txCycle,4,4
+ 870              		.comm	canTx,8,4
+ 871              		.comm	canMailbox,4,4
+ 872              		.comm	canRx,8,4
+ 873              		.comm	txMsgExt,24,4
+ 874              		.comm	txMsg,24,4
+ 875              		.comm	rxMsg,28,4
+ 876              		.comm	event,40,4
+ 877              		.comm	data,40,4
+ 878              		.comm	hcan,40,4
+ 879              		.text
+ 880              	.Letext0:
+ 881              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 882              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 883              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 884              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 885              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 886              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 887              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 888              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 889              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 890              		.file 11 "/usr/include/newlib/sys/lock.h"
+ 891              		.file 12 "/usr/include/newlib/sys/_types.h"
+ 892              		.file 13 "/usr/include/newlib/sys/reent.h"
+ 893              		.file 14 "Core/Inc/can_setup.h"
+ 894              		.file 15 "Core/Inc/encoder.h"
+ 895              		.file 16 "Core/Inc/window.h"
+ 896              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ARM GAS  /tmp/cc2F5V2v.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 window.c
-     /tmp/ccviwRRs.s:16     .text.windowInit:0000000000000000 $t
-     /tmp/ccviwRRs.s:23     .text.windowInit:0000000000000000 windowInit
-     /tmp/ccviwRRs.s:133    .text.windowInit:0000000000000064 $d
+     /tmp/cc2F5V2v.s:16     .text.windowInit:0000000000000000 $t
+     /tmp/cc2F5V2v.s:23     .text.windowInit:0000000000000000 windowInit
+     /tmp/cc2F5V2v.s:133    .text.windowInit:0000000000000064 $d
                             *COM*:0000000000000028 window
                             *COM*:0000000000000020 motorCurrent
                             *COM*:0000000000000001 stageState
                             *COM*:0000000000000001 stageNextState
-     /tmp/ccviwRRs.s:141    .text.stateHandler:0000000000000000 $t
-     /tmp/ccviwRRs.s:148    .text.stateHandler:0000000000000000 stateHandler
-     /tmp/ccviwRRs.s:266    .text.stateHandler:0000000000000098 $d
-     /tmp/ccviwRRs.s:272    .text.motorHandler:0000000000000000 $t
-     /tmp/ccviwRRs.s:279    .text.motorHandler:0000000000000000 motorHandler
-     /tmp/ccviwRRs.s:299    .text.motorHandler:000000000000000e $d
-     /tmp/ccviwRRs.s:303    .text.motorHandler:0000000000000012 $t
-     /tmp/ccviwRRs.s:566    .text.motorHandler:0000000000000180 $d
-     /tmp/ccviwRRs.s:571    .text.eventHandler:0000000000000000 $t
-     /tmp/ccviwRRs.s:578    .text.eventHandler:0000000000000000 eventHandler
-     /tmp/ccviwRRs.s:615    .text.eventHandler:0000000000000030 $d
-     /tmp/ccviwRRs.s:623    .text.eventHandler:0000000000000050 $t
-     /tmp/ccviwRRs.s:743    .text.eventHandler:00000000000000e4 $d
+     /tmp/cc2F5V2v.s:141    .text.stateHandler:0000000000000000 $t
+     /tmp/cc2F5V2v.s:148    .text.stateHandler:0000000000000000 stateHandler
+     /tmp/cc2F5V2v.s:266    .text.stateHandler:0000000000000098 $d
+     /tmp/cc2F5V2v.s:272    .text.motorHandler:0000000000000000 $t
+     /tmp/cc2F5V2v.s:279    .text.motorHandler:0000000000000000 motorHandler
+     /tmp/cc2F5V2v.s:299    .text.motorHandler:000000000000000e $d
+     /tmp/cc2F5V2v.s:303    .text.motorHandler:0000000000000012 $t
+     /tmp/cc2F5V2v.s:566    .text.motorHandler:0000000000000180 $d
+     /tmp/cc2F5V2v.s:571    .text.eventHandler:0000000000000000 $t
+     /tmp/cc2F5V2v.s:578    .text.eventHandler:0000000000000000 eventHandler
+     /tmp/cc2F5V2v.s:615    .text.eventHandler:0000000000000030 $d
+     /tmp/cc2F5V2v.s:623    .text.eventHandler:0000000000000050 $t
+     /tmp/cc2F5V2v.s:743    .text.eventHandler:00000000000000e4 $d
                             *COM*:000000000000000a te
-     /tmp/ccviwRRs.s:751    .text.staging:0000000000000000 $t
-     /tmp/ccviwRRs.s:758    .text.staging:0000000000000000 staging
-     /tmp/ccviwRRs.s:799    .text.staging:000000000000002c $d
-     /tmp/ccviwRRs.s:806    .text.windowHandler:0000000000000000 $t
-     /tmp/ccviwRRs.s:813    .text.windowHandler:0000000000000000 windowHandler
-     /tmp/ccviwRRs.s:860    .text.windowHandler:000000000000002c $d
-                            *COM*:0000000000000004 canDebug
+     /tmp/cc2F5V2v.s:751    .text.staging:0000000000000000 $t
+     /tmp/cc2F5V2v.s:758    .text.staging:0000000000000000 staging
+     /tmp/cc2F5V2v.s:799    .text.staging:000000000000002c $d
+     /tmp/cc2F5V2v.s:806    .text.windowHandler:0000000000000000 $t
+     /tmp/cc2F5V2v.s:813    .text.windowHandler:0000000000000000 windowHandler
+     /tmp/cc2F5V2v.s:860    .text.windowHandler:000000000000002c $d
                             *COM*:0000000000000004 txCycle
-                            *COM*:0000000000000004 busCount
                             *COM*:0000000000000008 canTx
                             *COM*:0000000000000004 canMailbox
                             *COM*:0000000000000008 canRx

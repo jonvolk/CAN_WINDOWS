@@ -1,7 +1,7 @@
 #if !defined(__WINDOW_H)
 #define __WINDOW_H
 
-#include "stdint.h"
+
 #include "encoder.h"
 
 #define MAX_WINDOWS 4
