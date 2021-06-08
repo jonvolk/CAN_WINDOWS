@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBb3YFA.s 			page 1
+ARM GAS  /tmp/cczyri0m.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
   47 0008 164C     		ldr	r4, .L14
   48 000a 8B00     		lsls	r3, r1, #2
   49 000c 0B44     		add	r3, r3, r1
-ARM GAS  /tmp/ccBb3YFA.s 			page 2
+ARM GAS  /tmp/cczyri0m.s 			page 2
 
 
   50 000e 5800     		lsls	r0, r3, #1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
   90 003a 0C4A     		ldr	r2, .L14+8
   91 003c 1370     		strb	r3, [r2]
   20:Core/Src/window.c ****     stageNextState = 0;
-ARM GAS  /tmp/ccBb3YFA.s 			page 3
+ARM GAS  /tmp/cczyri0m.s 			page 3
 
 
   92              		.loc 1 20 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  142              		.global	stateHandler
  143              		.syntax unified
  144              		.thumb
-ARM GAS  /tmp/ccBb3YFA.s 			page 4
+ARM GAS  /tmp/cczyri0m.s 			page 4
 
 
  145              		.thumb_func
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  178              		.loc 1 43 0
  179 0020 D269     		ldr	r2, [r2, #28]
  180 0022 1A83     		strh	r2, [r3, #24]	@ movhi
-ARM GAS  /tmp/ccBb3YFA.s 			page 5
+ARM GAS  /tmp/cczyri0m.s 			page 5
 
 
  181              	.LVL10:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  221 0060 E9E7     		b	.L19
  222              	.L25:
  223 0062 0023     		movs	r3, #0
-ARM GAS  /tmp/ccBb3YFA.s 			page 6
+ARM GAS  /tmp/cczyri0m.s 			page 6
 
 
  224              	.LVL13:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  258 0092 E8E7     		b	.L22
  259              	.L26:
  260              	.LBE8:
-ARM GAS  /tmp/ccBb3YFA.s 			page 7
+ARM GAS  /tmp/cczyri0m.s 			page 7
 
 
   70:Core/Src/window.c ****         }
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  306 0012 012B     		cmp	r3, #1
  307 0014 0FD0     		beq	.L36
  308 0016 13B1     		cbz	r3, .L37
-ARM GAS  /tmp/ccBb3YFA.s 			page 8
+ARM GAS  /tmp/cczyri0m.s 			page 8
 
 
  309 0018 022B     		cmp	r3, #2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  352 004e 4C4C     		ldr	r4, .L49
  353 0050 0122     		movs	r2, #1
  354 0052 1146     		mov	r1, r2
-ARM GAS  /tmp/ccBb3YFA.s 			page 9
+ARM GAS  /tmp/cczyri0m.s 			page 9
 
 
  355              	.LVL28:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  396              	.L39:
  105:Core/Src/window.c ****         case up:
  106:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_U_GPIO_Port, LR_U_Pin, RESET);
-ARM GAS  /tmp/ccBb3YFA.s 			page 10
+ARM GAS  /tmp/cczyri0m.s 			page 10
 
 
  397              		.loc 1 106 0
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  439 00cc 022B     		cmp	r3, #2
  440 00ce 1AD0     		beq	.L44
  441 00d0 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccBb3YFA.s 			page 11
+ARM GAS  /tmp/cczyri0m.s 			page 11
 
 
  442              	.L43:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  485              	.LVL58:
  486 010c 2046     		mov	r0, r4
  487              	.LVL59:
-ARM GAS  /tmp/ccBb3YFA.s 			page 12
+ARM GAS  /tmp/cczyri0m.s 			page 12
 
 
  488 010e FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  527              		.loc 1 144 0
  528 0148 0D4C     		ldr	r4, .L49
  529 014a 0022     		movs	r2, #0
-ARM GAS  /tmp/ccBb3YFA.s 			page 13
+ARM GAS  /tmp/cczyri0m.s 			page 13
 
 
  530 014c 4FF40051 		mov	r1, #8192
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  151:Core/Src/window.c ****         default:
  152:Core/Src/window.c ****             break;
  153:Core/Src/window.c ****         }
-ARM GAS  /tmp/ccBb3YFA.s 			page 14
+ARM GAS  /tmp/cczyri0m.s 			page 14
 
 
  154:Core/Src/window.c ****         break;
@@ -798,7 +798,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  584              		@ link register save eliminated.
  164:Core/Src/window.c ****     if (te.currentScreen == 9 && te.valueId == 1)
  585              		.loc 1 164 0
- 586 0000 384B     		ldr	r3, .L71
+ 586 0000 394B     		ldr	r3, .L71
  587 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  588 0004 092B     		cmp	r3, #9
  589 0006 05D0     		beq	.L69
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  197:Core/Src/window.c ****                 break;
  198:Core/Src/window.c ****             default:
  199:Core/Src/window.c ****                 break;
-ARM GAS  /tmp/ccBb3YFA.s 			page 15
+ARM GAS  /tmp/cczyri0m.s 			page 15
 
 
  200:Core/Src/window.c ****             }
@@ -884,7 +884,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  240:Core/Src/window.c **** 
  241:Core/Src/window.c ****     if (te.tap >= TAP_ANY)
  591              		.loc 1 241 0
- 592 0008 364B     		ldr	r3, .L71
+ 592 0008 374B     		ldr	r3, .L71
  593 000a B3F90230 		ldrsh	r3, [r3, #2]
  594 000e 002B     		cmp	r3, #0
  595 0010 5ADB     		blt	.L70
@@ -893,16 +893,16 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  598              	.L69:
  164:Core/Src/window.c ****     if (te.currentScreen == 9 && te.valueId == 1)
  599              		.loc 1 164 0 discriminator 1
- 600 0014 334B     		ldr	r3, .L71
+ 600 0014 344B     		ldr	r3, .L71
  601 0016 5B79     		ldrb	r3, [r3, #5]	@ zero_extendqisi2
  602 0018 012B     		cmp	r3, #1
  603 001a F5D1     		bne	.L52
  167:Core/Src/window.c ****         {
-ARM GAS  /tmp/ccBb3YFA.s 			page 16
+ARM GAS  /tmp/cczyri0m.s 			page 16
 
 
  604              		.loc 1 167 0
- 605 001c 314B     		ldr	r3, .L71
+ 605 001c 324B     		ldr	r3, .L71
  606 001e DB88     		ldrh	r3, [r3, #6]
  607 0020 A3F50043 		sub	r3, r3, #32768
  608 0024 013B     		subs	r3, r3, #1
@@ -924,7 +924,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  624              	.L53:
  170:Core/Src/window.c ****             {
  625              		.loc 1 170 0
- 626 0050 244B     		ldr	r3, .L71
+ 626 0050 254B     		ldr	r3, .L71
  627 0052 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  628 0054 812B     		cmp	r3, #129
  629 0056 06D0     		beq	.L58
@@ -932,7 +932,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  631 005a D5D1     		bne	.L52
  177:Core/Src/window.c ****                 window[rf].state = down;
  632              		.loc 1 177 0
- 633 005c 224B     		ldr	r3, .L71+4
+ 633 005c 234B     		ldr	r3, .L71+4
  634 005e 0222     		movs	r2, #2
  635 0060 1A70     		strb	r2, [r3]
  178:Core/Src/window.c ****             default:
@@ -942,7 +942,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  639              	.L58:
  173:Core/Src/window.c ****                 window[rf].state = up;
  640              		.loc 1 173 0
- 641 0066 204B     		ldr	r3, .L71+4
+ 641 0066 214B     		ldr	r3, .L71+4
  642 0068 0122     		movs	r2, #1
  643 006a 1A70     		strb	r2, [r3]
  174:Core/Src/window.c ****                 break;
@@ -954,18 +954,18 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  648              	.L56:
  185:Core/Src/window.c ****             {
  649              		.loc 1 185 0
- 650 0070 1C4B     		ldr	r3, .L71
+ 650 0070 1D4B     		ldr	r3, .L71
  651 0072 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  652 0074 812B     		cmp	r3, #129
  653 0076 06D0     		beq	.L60
-ARM GAS  /tmp/ccBb3YFA.s 			page 17
+ARM GAS  /tmp/cczyri0m.s 			page 17
 
 
  654 0078 822B     		cmp	r3, #130
  655 007a C5D1     		bne	.L52
  194:Core/Src/window.c ****                 window[rr].state = down;
  656              		.loc 1 194 0
- 657 007c 1A4B     		ldr	r3, .L71+4
+ 657 007c 1B4B     		ldr	r3, .L71+4
  658 007e 0222     		movs	r2, #2
  659 0080 9A72     		strb	r2, [r3, #10]
  195:Core/Src/window.c **** 
@@ -977,7 +977,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  664              	.L60:
  189:Core/Src/window.c ****                 window[rr].state = up;
  665              		.loc 1 189 0
- 666 0086 184B     		ldr	r3, .L71+4
+ 666 0086 194B     		ldr	r3, .L71+4
  667 0088 0122     		movs	r2, #1
  668 008a 9A72     		strb	r2, [r3, #10]
  190:Core/Src/window.c ****                 break;
@@ -989,7 +989,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  673              	.L57:
  204:Core/Src/window.c ****             {
  674              		.loc 1 204 0
- 675 0090 144B     		ldr	r3, .L71
+ 675 0090 154B     		ldr	r3, .L71
  676 0092 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  677 0094 812B     		cmp	r3, #129
  678 0096 05D0     		beq	.L62
@@ -998,7 +998,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  210:Core/Src/window.c ****                 break;
  681              		.loc 1 210 0
  682 009c 0222     		movs	r2, #2
- 683 009e 124B     		ldr	r3, .L71+4
+ 683 009e 134B     		ldr	r3, .L71+4
  684 00a0 1A70     		strb	r2, [r3]
  211:Core/Src/window.c **** 
  685              		.loc 1 211 0
@@ -1007,7 +1007,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  207:Core/Src/window.c ****                 break;
  688              		.loc 1 207 0
  689 00a4 0122     		movs	r2, #1
- 690 00a6 104B     		ldr	r3, .L71+4
+ 690 00a6 114B     		ldr	r3, .L71+4
  691 00a8 1A70     		strb	r2, [r3]
  208:Core/Src/window.c ****             case SWIPE_DOWN:
  692              		.loc 1 208 0
@@ -1015,10 +1015,10 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  694              	.L55:
  219:Core/Src/window.c ****             {
  695              		.loc 1 219 0
- 696 00ac 0D4B     		ldr	r3, .L71
+ 696 00ac 0E4B     		ldr	r3, .L71
  697 00ae 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  698 00b0 812B     		cmp	r3, #129
-ARM GAS  /tmp/ccBb3YFA.s 			page 18
+ARM GAS  /tmp/cczyri0m.s 			page 18
 
 
  699 00b2 05D0     		beq	.L64
@@ -1027,7 +1027,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  225:Core/Src/window.c ****                 break;
  702              		.loc 1 225 0
  703 00b8 0222     		movs	r2, #2
- 704 00ba 0B4B     		ldr	r3, .L71+4
+ 704 00ba 0C4B     		ldr	r3, .L71+4
  705 00bc 1A75     		strb	r2, [r3, #20]
  226:Core/Src/window.c **** 
  706              		.loc 1 226 0
@@ -1036,7 +1036,7 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  222:Core/Src/window.c ****                 break;
  709              		.loc 1 222 0
  710 00c0 0122     		movs	r2, #1
- 711 00c2 094B     		ldr	r3, .L71+4
+ 711 00c2 0A4B     		ldr	r3, .L71+4
  712 00c4 1A75     		strb	r2, [r3, #20]
  223:Core/Src/window.c ****             case SWIPE_DOWN:
  713              		.loc 1 223 0
@@ -1046,470 +1046,475 @@ ARM GAS  /tmp/ccBb3YFA.s 			page 1
  243:Core/Src/window.c ****         stageState = ready;
  716              		.loc 1 243 0
  717 00c8 0023     		movs	r3, #0
- 718 00ca 084A     		ldr	r2, .L71+8
+ 718 00ca 094A     		ldr	r2, .L71+8
  719 00cc 1370     		strb	r3, [r2]
- 720              	.LVL77:
- 721              	.LBB9:
- 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
- 722              		.loc 1 244 0
- 723 00ce 06E0     		b	.L67
- 724              	.LVL78:
- 725              	.L68:
- 245:Core/Src/window.c ****         {
- 246:Core/Src/window.c ****             window[i].state = idle;
- 726              		.loc 1 246 0 discriminator 3
- 727 00d0 03EB8301 		add	r1, r3, r3, lsl #2
- 728 00d4 4A00     		lsls	r2, r1, #1
- 729 00d6 0020     		movs	r0, #0
- 730 00d8 0349     		ldr	r1, .L71+4
- 731 00da 8854     		strb	r0, [r1, r2]
- 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
- 732              		.loc 1 244 0 discriminator 3
- 733 00dc 0133     		adds	r3, r3, #1
- 734              	.LVL79:
- 735              	.L67:
- 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
- 736              		.loc 1 244 0 is_stmt 0 discriminator 1
- 737 00de 032B     		cmp	r3, #3
- 738 00e0 F6D9     		bls	.L68
- 739 00e2 96E7     		b	.L51
- 740              	.L72:
- 741              		.align	2
- 742              	.L71:
- 743 00e4 00000000 		.word	te
- 744 00e8 00000000 		.word	window
-ARM GAS  /tmp/ccBb3YFA.s 			page 19
+ 244:Core/Src/window.c ****         stageNextState = ready;
+ 720              		.loc 1 244 0
+ 721 00ce 094A     		ldr	r2, .L71+12
+ 722 00d0 1370     		strb	r3, [r2]
+ 723              	.LVL77:
+ 724              	.LBB9:
+ 245:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 725              		.loc 1 245 0
+ 726 00d2 06E0     		b	.L67
+ 727              	.LVL78:
+ 728              	.L68:
+ 246:Core/Src/window.c ****         {
+ 247:Core/Src/window.c ****             window[i].state = idle;
+ 729              		.loc 1 247 0 discriminator 3
+ 730 00d4 03EB8301 		add	r1, r3, r3, lsl #2
+ 731 00d8 4A00     		lsls	r2, r1, #1
+ 732 00da 0020     		movs	r0, #0
+ 733 00dc 0349     		ldr	r1, .L71+4
+ 734 00de 8854     		strb	r0, [r1, r2]
+ 245:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 735              		.loc 1 245 0 discriminator 3
+ 736 00e0 0133     		adds	r3, r3, #1
+ 737              	.LVL79:
+ 738              	.L67:
+ 245:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 739              		.loc 1 245 0 is_stmt 0 discriminator 1
+ 740 00e2 032B     		cmp	r3, #3
+ 741 00e4 F6D9     		bls	.L68
+ 742 00e6 94E7     		b	.L51
+ 743              	.L72:
+ARM GAS  /tmp/cczyri0m.s 			page 19
 
 
- 745 00ec 00000000 		.word	stageState
- 746              	.LBE9:
- 747              		.cfi_endproc
- 748              	.LFE70:
- 750              		.section	.text.staging,"ax",%progbits
- 751              		.align	1
- 752              		.global	staging
- 753              		.syntax unified
- 754              		.thumb
- 755              		.thumb_func
- 756              		.fpu softvfp
- 758              	staging:
- 759              	.LFB71:
- 247:Core/Src/window.c ****         }
- 248:Core/Src/window.c ****     }
- 249:Core/Src/window.c **** }
- 250:Core/Src/window.c **** 
- 251:Core/Src/window.c **** void staging(void)
- 252:Core/Src/window.c **** {
- 760              		.loc 1 252 0 is_stmt 1
- 761              		.cfi_startproc
- 762              		@ args = 0, pretend = 0, frame = 0
- 763              		@ frame_needed = 0, uses_anonymous_args = 0
- 764              		@ link register save eliminated.
- 253:Core/Src/window.c ****     switch (stageState)
- 765              		.loc 1 253 0
- 766 0000 374B     		ldr	r3, .L89
- 767 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 768 0004 012B     		cmp	r3, #1
- 769 0006 38D0     		beq	.L75
- 770 0008 022B     		cmp	r3, #2
- 771 000a 68D1     		bne	.L73
- 254:Core/Src/window.c ****     {
- 255:Core/Src/window.c **** 
- 256:Core/Src/window.c ****     case ready:
- 257:Core/Src/window.c ****         break;
- 258:Core/Src/window.c **** 
- 259:Core/Src/window.c ****     case all_up:
- 260:Core/Src/window.c **** 
- 261:Core/Src/window.c ****         switch (stageNextState)
- 772              		.loc 1 261 0
- 773 000c 354B     		ldr	r3, .L89+4
- 774 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 775 0010 062B     		cmp	r3, #6
- 776 0012 64D8     		bhi	.L73
- 777 0014 DFE803F0 		tbb	[pc, r3]
- 778              	.L78:
- 779 0018 04       		.byte	(.L77-.L78)/2
- 780 0019 63       		.byte	(.L73-.L78)/2
- 781 001a 63       		.byte	(.L73-.L78)/2
- 782 001b 1C       		.byte	(.L79-.L78)/2
- 783 001c 24       		.byte	(.L80-.L78)/2
- 784 001d 08       		.byte	(.L81-.L78)/2
- 785 001e 10       		.byte	(.L82-.L78)/2
- 786 001f 00       		.p2align 1
- 787              	.L77:
- 262:Core/Src/window.c ****         {
-ARM GAS  /tmp/ccBb3YFA.s 			page 20
+ 744              		.align	2
+ 745              	.L71:
+ 746 00e8 00000000 		.word	te
+ 747 00ec 00000000 		.word	window
+ 748 00f0 00000000 		.word	stageState
+ 749 00f4 00000000 		.word	stageNextState
+ 750              	.LBE9:
+ 751              		.cfi_endproc
+ 752              	.LFE70:
+ 754              		.section	.text.staging,"ax",%progbits
+ 755              		.align	1
+ 756              		.global	staging
+ 757              		.syntax unified
+ 758              		.thumb
+ 759              		.thumb_func
+ 760              		.fpu softvfp
+ 762              	staging:
+ 763              	.LFB71:
+ 248:Core/Src/window.c ****         }
+ 249:Core/Src/window.c ****     }
+ 250:Core/Src/window.c **** }
+ 251:Core/Src/window.c **** 
+ 252:Core/Src/window.c **** void staging(void)
+ 253:Core/Src/window.c **** {
+ 764              		.loc 1 253 0 is_stmt 1
+ 765              		.cfi_startproc
+ 766              		@ args = 0, pretend = 0, frame = 0
+ 767              		@ frame_needed = 0, uses_anonymous_args = 0
+ 768              		@ link register save eliminated.
+ 254:Core/Src/window.c ****     switch (stageState)
+ 769              		.loc 1 254 0
+ 770 0000 374B     		ldr	r3, .L89
+ 771 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 772 0004 012B     		cmp	r3, #1
+ 773 0006 38D0     		beq	.L75
+ 774 0008 022B     		cmp	r3, #2
+ 775 000a 68D1     		bne	.L73
+ 255:Core/Src/window.c ****     {
+ 256:Core/Src/window.c **** 
+ 257:Core/Src/window.c ****     case ready:
+ 258:Core/Src/window.c ****         break;
+ 259:Core/Src/window.c **** 
+ 260:Core/Src/window.c ****     case all_up:
+ 261:Core/Src/window.c **** 
+ 262:Core/Src/window.c ****         switch (stageNextState)
+ 776              		.loc 1 262 0
+ 777 000c 354B     		ldr	r3, .L89+4
+ 778 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 779 0010 062B     		cmp	r3, #6
+ 780 0012 64D8     		bhi	.L73
+ 781 0014 DFE803F0 		tbb	[pc, r3]
+ 782              	.L78:
+ 783 0018 04       		.byte	(.L77-.L78)/2
+ 784 0019 63       		.byte	(.L73-.L78)/2
+ 785 001a 63       		.byte	(.L73-.L78)/2
+ 786 001b 1C       		.byte	(.L79-.L78)/2
+ 787 001c 24       		.byte	(.L80-.L78)/2
+ARM GAS  /tmp/cczyri0m.s 			page 20
 
 
- 263:Core/Src/window.c ****         case ready:
- 264:Core/Src/window.c ****             stageNextState = rear_run;
- 788              		.loc 1 264 0
- 789 0020 0522     		movs	r2, #5
- 790 0022 304B     		ldr	r3, .L89+4
- 791 0024 1A70     		strb	r2, [r3]
- 265:Core/Src/window.c ****             break;
+ 788 001d 08       		.byte	(.L81-.L78)/2
+ 789 001e 10       		.byte	(.L82-.L78)/2
+ 790 001f 00       		.p2align 1
+ 791              	.L77:
+ 263:Core/Src/window.c ****         {
+ 264:Core/Src/window.c ****         case ready:
+ 265:Core/Src/window.c ****             stageNextState = rear_run;
  792              		.loc 1 265 0
- 793 0026 7047     		bx	lr
- 794              	.L81:
- 266:Core/Src/window.c **** 
- 267:Core/Src/window.c ****         case rear_run:
- 268:Core/Src/window.c ****             window[lr].state = up;
- 795              		.loc 1 268 0
- 796 0028 2F4B     		ldr	r3, .L89+8
- 797 002a 0122     		movs	r2, #1
- 798 002c 9A72     		strb	r2, [r3, #10]
- 269:Core/Src/window.c ****             window[rr].state = up;
+ 793 0020 0522     		movs	r2, #5
+ 794 0022 304B     		ldr	r3, .L89+4
+ 795 0024 1A70     		strb	r2, [r3]
+ 266:Core/Src/window.c ****             break;
+ 796              		.loc 1 266 0
+ 797 0026 7047     		bx	lr
+ 798              	.L81:
+ 267:Core/Src/window.c **** 
+ 268:Core/Src/window.c ****         case rear_run:
+ 269:Core/Src/window.c ****             window[lr].state = up;
  799              		.loc 1 269 0
- 800 002e 9A77     		strb	r2, [r3, #30]
- 270:Core/Src/window.c ****             stageNextState = rear_done;
- 801              		.loc 1 270 0
- 802 0030 0622     		movs	r2, #6
- 803 0032 2C4B     		ldr	r3, .L89+4
- 804 0034 1A70     		strb	r2, [r3]
- 271:Core/Src/window.c ****             break;
+ 800 0028 2F4B     		ldr	r3, .L89+8
+ 801 002a 0122     		movs	r2, #1
+ 802 002c 9A72     		strb	r2, [r3, #10]
+ 270:Core/Src/window.c ****             window[rr].state = up;
+ 803              		.loc 1 270 0
+ 804 002e 9A77     		strb	r2, [r3, #30]
+ 271:Core/Src/window.c ****             stageNextState = rear_done;
  805              		.loc 1 271 0
- 806 0036 7047     		bx	lr
- 807              	.L82:
- 272:Core/Src/window.c **** 
- 273:Core/Src/window.c ****         case rear_done:
- 274:Core/Src/window.c ****             if (window[lr].state == idle && window[rr].state == idle)
- 808              		.loc 1 274 0
- 809 0038 2B4B     		ldr	r3, .L89+8
- 810 003a 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
- 811 003c 002B     		cmp	r3, #0
- 812 003e 4ED1     		bne	.L73
- 813              		.loc 1 274 0 is_stmt 0 discriminator 1
- 814 0040 294B     		ldr	r3, .L89+8
- 815 0042 9B7F     		ldrb	r3, [r3, #30]	@ zero_extendqisi2
- 816 0044 002B     		cmp	r3, #0
- 817 0046 4AD1     		bne	.L73
- 275:Core/Src/window.c ****             {
- 276:Core/Src/window.c ****                 stageNextState = front_run;
- 818              		.loc 1 276 0 is_stmt 1
- 819 0048 0322     		movs	r2, #3
- 820 004a 264B     		ldr	r3, .L89+4
- 821 004c 1A70     		strb	r2, [r3]
- 822 004e 7047     		bx	lr
- 823              	.L79:
- 277:Core/Src/window.c ****             }
- 278:Core/Src/window.c ****             break;
- 279:Core/Src/window.c **** 
- 280:Core/Src/window.c ****         case front_run:
- 281:Core/Src/window.c ****             window[lf].state = up;
- 824              		.loc 1 281 0
- 825 0050 254B     		ldr	r3, .L89+8
-ARM GAS  /tmp/ccBb3YFA.s 			page 21
+ 806 0030 0622     		movs	r2, #6
+ 807 0032 2C4B     		ldr	r3, .L89+4
+ 808 0034 1A70     		strb	r2, [r3]
+ 272:Core/Src/window.c ****             break;
+ 809              		.loc 1 272 0
+ 810 0036 7047     		bx	lr
+ 811              	.L82:
+ 273:Core/Src/window.c **** 
+ 274:Core/Src/window.c ****         case rear_done:
+ 275:Core/Src/window.c ****             if (window[lr].state == idle && window[rr].state == idle)
+ 812              		.loc 1 275 0
+ 813 0038 2B4B     		ldr	r3, .L89+8
+ 814 003a 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
+ 815 003c 002B     		cmp	r3, #0
+ 816 003e 4ED1     		bne	.L73
+ 817              		.loc 1 275 0 is_stmt 0 discriminator 1
+ 818 0040 294B     		ldr	r3, .L89+8
+ 819 0042 9B7F     		ldrb	r3, [r3, #30]	@ zero_extendqisi2
+ 820 0044 002B     		cmp	r3, #0
+ 821 0046 4AD1     		bne	.L73
+ 276:Core/Src/window.c ****             {
+ 277:Core/Src/window.c ****                 stageNextState = front_run;
+ 822              		.loc 1 277 0 is_stmt 1
+ 823 0048 0322     		movs	r2, #3
+ 824 004a 264B     		ldr	r3, .L89+4
+ 825 004c 1A70     		strb	r2, [r3]
+ 826 004e 7047     		bx	lr
+ 827              	.L79:
+ 278:Core/Src/window.c ****             }
+ 279:Core/Src/window.c ****             break;
+ARM GAS  /tmp/cczyri0m.s 			page 21
 
 
- 826 0052 0122     		movs	r2, #1
- 827 0054 1A70     		strb	r2, [r3]
- 282:Core/Src/window.c ****             window[rf].state = up;
+ 280:Core/Src/window.c **** 
+ 281:Core/Src/window.c ****         case front_run:
+ 282:Core/Src/window.c ****             window[lf].state = up;
  828              		.loc 1 282 0
- 829 0056 1A75     		strb	r2, [r3, #20]
- 283:Core/Src/window.c ****             stageNextState = front_done;
- 830              		.loc 1 283 0
- 831 0058 0422     		movs	r2, #4
- 832 005a 224B     		ldr	r3, .L89+4
- 833 005c 1A70     		strb	r2, [r3]
- 284:Core/Src/window.c ****             break;
+ 829 0050 254B     		ldr	r3, .L89+8
+ 830 0052 0122     		movs	r2, #1
+ 831 0054 1A70     		strb	r2, [r3]
+ 283:Core/Src/window.c ****             window[rf].state = up;
+ 832              		.loc 1 283 0
+ 833 0056 1A75     		strb	r2, [r3, #20]
+ 284:Core/Src/window.c ****             stageNextState = front_done;
  834              		.loc 1 284 0
- 835 005e 7047     		bx	lr
- 836              	.L80:
- 285:Core/Src/window.c **** 
- 286:Core/Src/window.c ****         case front_done:
- 287:Core/Src/window.c ****             if (window[lf].state == idle && window[rf].state == idle)
- 837              		.loc 1 287 0
- 838 0060 214B     		ldr	r3, .L89+8
- 839 0062 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 840 0064 002B     		cmp	r3, #0
- 841 0066 3AD1     		bne	.L73
- 842              		.loc 1 287 0 is_stmt 0 discriminator 1
- 843 0068 1F4B     		ldr	r3, .L89+8
- 844 006a 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
- 845 006c 002B     		cmp	r3, #0
- 846 006e 36D1     		bne	.L73
- 288:Core/Src/window.c ****             {
- 289:Core/Src/window.c ****                 stageState = ready;
- 847              		.loc 1 289 0 is_stmt 1
- 848 0070 1B4A     		ldr	r2, .L89
- 849 0072 1370     		strb	r3, [r2]
- 290:Core/Src/window.c ****                 stageNextState = ready;
- 850              		.loc 1 290 0
- 851 0074 1B4A     		ldr	r2, .L89+4
- 852 0076 1370     		strb	r3, [r2]
- 853 0078 7047     		bx	lr
- 854              	.L75:
- 291:Core/Src/window.c ****             }
- 292:Core/Src/window.c ****             break;
- 293:Core/Src/window.c **** 
- 294:Core/Src/window.c ****         default:
- 295:Core/Src/window.c ****             break;
- 296:Core/Src/window.c ****         }
- 297:Core/Src/window.c **** 
- 298:Core/Src/window.c ****         break;
- 299:Core/Src/window.c ****     case all_down:
- 300:Core/Src/window.c **** 
- 301:Core/Src/window.c ****         switch (stageNextState)
- 855              		.loc 1 301 0
- 856 007a 1A4B     		ldr	r3, .L89+4
- 857 007c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 858 007e 062B     		cmp	r3, #6
- 859 0080 2DD8     		bhi	.L73
- 860 0082 DFE803F0 		tbb	[pc, r3]
- 861              	.L84:
- 862 0086 04       		.byte	(.L83-.L84)/2
-ARM GAS  /tmp/ccBb3YFA.s 			page 22
+ 835 0058 0422     		movs	r2, #4
+ 836 005a 224B     		ldr	r3, .L89+4
+ 837 005c 1A70     		strb	r2, [r3]
+ 285:Core/Src/window.c ****             break;
+ 838              		.loc 1 285 0
+ 839 005e 7047     		bx	lr
+ 840              	.L80:
+ 286:Core/Src/window.c **** 
+ 287:Core/Src/window.c ****         case front_done:
+ 288:Core/Src/window.c ****             if (window[lf].state == idle && window[rf].state == idle)
+ 841              		.loc 1 288 0
+ 842 0060 214B     		ldr	r3, .L89+8
+ 843 0062 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 844 0064 002B     		cmp	r3, #0
+ 845 0066 3AD1     		bne	.L73
+ 846              		.loc 1 288 0 is_stmt 0 discriminator 1
+ 847 0068 1F4B     		ldr	r3, .L89+8
+ 848 006a 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 849 006c 002B     		cmp	r3, #0
+ 850 006e 36D1     		bne	.L73
+ 289:Core/Src/window.c ****             {
+ 290:Core/Src/window.c ****                 stageState = ready;
+ 851              		.loc 1 290 0 is_stmt 1
+ 852 0070 1B4A     		ldr	r2, .L89
+ 853 0072 1370     		strb	r3, [r2]
+ 291:Core/Src/window.c ****                 stageNextState = ready;
+ 854              		.loc 1 291 0
+ 855 0074 1B4A     		ldr	r2, .L89+4
+ 856 0076 1370     		strb	r3, [r2]
+ 857 0078 7047     		bx	lr
+ 858              	.L75:
+ 292:Core/Src/window.c ****             }
+ 293:Core/Src/window.c ****             break;
+ 294:Core/Src/window.c **** 
+ 295:Core/Src/window.c ****         default:
+ 296:Core/Src/window.c ****             break;
+ 297:Core/Src/window.c ****         }
+ 298:Core/Src/window.c **** 
+ 299:Core/Src/window.c ****         break;
+ 300:Core/Src/window.c ****     case all_down:
+ 301:Core/Src/window.c **** 
+ 302:Core/Src/window.c ****         switch (stageNextState)
+ 859              		.loc 1 302 0
+ 860 007a 1A4B     		ldr	r3, .L89+4
+ 861 007c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ARM GAS  /tmp/cczyri0m.s 			page 22
 
 
- 863 0087 2C       		.byte	(.L73-.L84)/2
- 864 0088 2C       		.byte	(.L73-.L84)/2
- 865 0089 08       		.byte	(.L85-.L84)/2
- 866 008a 10       		.byte	(.L86-.L84)/2
- 867 008b 1A       		.byte	(.L87-.L84)/2
- 868 008c 22       		.byte	(.L88-.L84)/2
- 869 008d 00       		.p2align 1
- 870              	.L83:
- 302:Core/Src/window.c ****         {
- 303:Core/Src/window.c ****         case ready:
- 304:Core/Src/window.c ****             stageNextState = front_run;
- 871              		.loc 1 304 0
- 872 008e 0322     		movs	r2, #3
- 873 0090 144B     		ldr	r3, .L89+4
- 874 0092 1A70     		strb	r2, [r3]
- 305:Core/Src/window.c ****             break;
+ 862 007e 062B     		cmp	r3, #6
+ 863 0080 2DD8     		bhi	.L73
+ 864 0082 DFE803F0 		tbb	[pc, r3]
+ 865              	.L84:
+ 866 0086 04       		.byte	(.L83-.L84)/2
+ 867 0087 2C       		.byte	(.L73-.L84)/2
+ 868 0088 2C       		.byte	(.L73-.L84)/2
+ 869 0089 08       		.byte	(.L85-.L84)/2
+ 870 008a 10       		.byte	(.L86-.L84)/2
+ 871 008b 1A       		.byte	(.L87-.L84)/2
+ 872 008c 22       		.byte	(.L88-.L84)/2
+ 873 008d 00       		.p2align 1
+ 874              	.L83:
+ 303:Core/Src/window.c ****         {
+ 304:Core/Src/window.c ****         case ready:
+ 305:Core/Src/window.c ****             stageNextState = front_run;
  875              		.loc 1 305 0
- 876 0094 7047     		bx	lr
- 877              	.L85:
- 306:Core/Src/window.c **** 
- 307:Core/Src/window.c ****         case front_run:
- 308:Core/Src/window.c ****             window[lf].state = down;
- 878              		.loc 1 308 0
- 879 0096 144B     		ldr	r3, .L89+8
- 880 0098 0222     		movs	r2, #2
- 881 009a 1A70     		strb	r2, [r3]
- 309:Core/Src/window.c ****             window[rf].state = down;
+ 876 008e 0322     		movs	r2, #3
+ 877 0090 144B     		ldr	r3, .L89+4
+ 878 0092 1A70     		strb	r2, [r3]
+ 306:Core/Src/window.c ****             break;
+ 879              		.loc 1 306 0
+ 880 0094 7047     		bx	lr
+ 881              	.L85:
+ 307:Core/Src/window.c **** 
+ 308:Core/Src/window.c ****         case front_run:
+ 309:Core/Src/window.c ****             window[lf].state = down;
  882              		.loc 1 309 0
- 883 009c 1A75     		strb	r2, [r3, #20]
- 310:Core/Src/window.c ****             stageNextState = front_done;
- 884              		.loc 1 310 0
- 885 009e 0422     		movs	r2, #4
- 886 00a0 104B     		ldr	r3, .L89+4
- 887 00a2 1A70     		strb	r2, [r3]
- 311:Core/Src/window.c ****             break;
+ 883 0096 144B     		ldr	r3, .L89+8
+ 884 0098 0222     		movs	r2, #2
+ 885 009a 1A70     		strb	r2, [r3]
+ 310:Core/Src/window.c ****             window[rf].state = down;
+ 886              		.loc 1 310 0
+ 887 009c 1A75     		strb	r2, [r3, #20]
+ 311:Core/Src/window.c ****             stageNextState = front_done;
  888              		.loc 1 311 0
- 889 00a4 7047     		bx	lr
- 890              	.L86:
- 312:Core/Src/window.c **** 
- 313:Core/Src/window.c ****         case front_done:
- 314:Core/Src/window.c ****             if (window[lf].state == idle && window[rf].state == idle)
- 891              		.loc 1 314 0
- 892 00a6 104B     		ldr	r3, .L89+8
- 893 00a8 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 894 00aa C3B9     		cbnz	r3, .L73
- 895              		.loc 1 314 0 is_stmt 0 discriminator 1
- 896 00ac 0E4B     		ldr	r3, .L89+8
- 897 00ae 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
- 898 00b0 ABB9     		cbnz	r3, .L73
- 315:Core/Src/window.c ****             {
- 316:Core/Src/window.c ****                 stageNextState = rear_run;
- 899              		.loc 1 316 0 is_stmt 1
- 900 00b2 0522     		movs	r2, #5
- 901 00b4 0B4B     		ldr	r3, .L89+4
- 902 00b6 1A70     		strb	r2, [r3]
- 903 00b8 7047     		bx	lr
- 904              	.L87:
-ARM GAS  /tmp/ccBb3YFA.s 			page 23
+ 889 009e 0422     		movs	r2, #4
+ 890 00a0 104B     		ldr	r3, .L89+4
+ 891 00a2 1A70     		strb	r2, [r3]
+ 312:Core/Src/window.c ****             break;
+ 892              		.loc 1 312 0
+ 893 00a4 7047     		bx	lr
+ 894              	.L86:
+ 313:Core/Src/window.c **** 
+ 314:Core/Src/window.c ****         case front_done:
+ 315:Core/Src/window.c ****             if (window[lf].state == idle && window[rf].state == idle)
+ 895              		.loc 1 315 0
+ 896 00a6 104B     		ldr	r3, .L89+8
+ 897 00a8 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 898 00aa C3B9     		cbnz	r3, .L73
+ 899              		.loc 1 315 0 is_stmt 0 discriminator 1
+ 900 00ac 0E4B     		ldr	r3, .L89+8
+ 901 00ae 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 902 00b0 ABB9     		cbnz	r3, .L73
+ 316:Core/Src/window.c ****             {
+ 317:Core/Src/window.c ****                 stageNextState = rear_run;
+ 903              		.loc 1 317 0 is_stmt 1
+ARM GAS  /tmp/cczyri0m.s 			page 23
 
 
- 317:Core/Src/window.c ****             }
- 318:Core/Src/window.c ****             break;
- 319:Core/Src/window.c **** 
- 320:Core/Src/window.c ****         case rear_run:
- 321:Core/Src/window.c ****             window[lr].state = down;
- 905              		.loc 1 321 0
- 906 00ba 0B4B     		ldr	r3, .L89+8
- 907 00bc 0222     		movs	r2, #2
- 908 00be 9A72     		strb	r2, [r3, #10]
- 322:Core/Src/window.c ****             window[rr].state = down;
+ 904 00b2 0522     		movs	r2, #5
+ 905 00b4 0B4B     		ldr	r3, .L89+4
+ 906 00b6 1A70     		strb	r2, [r3]
+ 907 00b8 7047     		bx	lr
+ 908              	.L87:
+ 318:Core/Src/window.c ****             }
+ 319:Core/Src/window.c ****             break;
+ 320:Core/Src/window.c **** 
+ 321:Core/Src/window.c ****         case rear_run:
+ 322:Core/Src/window.c ****             window[lr].state = down;
  909              		.loc 1 322 0
- 910 00c0 9A77     		strb	r2, [r3, #30]
- 323:Core/Src/window.c ****             stageNextState = rear_done;
- 911              		.loc 1 323 0
- 912 00c2 0622     		movs	r2, #6
- 913 00c4 074B     		ldr	r3, .L89+4
- 914 00c6 1A70     		strb	r2, [r3]
- 324:Core/Src/window.c ****             break;
+ 910 00ba 0B4B     		ldr	r3, .L89+8
+ 911 00bc 0222     		movs	r2, #2
+ 912 00be 9A72     		strb	r2, [r3, #10]
+ 323:Core/Src/window.c ****             window[rr].state = down;
+ 913              		.loc 1 323 0
+ 914 00c0 9A77     		strb	r2, [r3, #30]
+ 324:Core/Src/window.c ****             stageNextState = rear_done;
  915              		.loc 1 324 0
- 916 00c8 7047     		bx	lr
- 917              	.L88:
- 325:Core/Src/window.c **** 
- 326:Core/Src/window.c ****         case rear_done:
- 327:Core/Src/window.c ****             if (window[lr].state == idle && window[rr].state == idle)
- 918              		.loc 1 327 0
- 919 00ca 074B     		ldr	r3, .L89+8
- 920 00cc 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
- 921 00ce 33B9     		cbnz	r3, .L73
- 922              		.loc 1 327 0 is_stmt 0 discriminator 1
- 923 00d0 054B     		ldr	r3, .L89+8
- 924 00d2 9B7F     		ldrb	r3, [r3, #30]	@ zero_extendqisi2
- 925 00d4 1BB9     		cbnz	r3, .L73
- 328:Core/Src/window.c ****             {
- 329:Core/Src/window.c ****                 stageState = ready;
- 926              		.loc 1 329 0 is_stmt 1
- 927 00d6 024A     		ldr	r2, .L89
- 928 00d8 1370     		strb	r3, [r2]
- 330:Core/Src/window.c ****                 stageNextState = ready;
- 929              		.loc 1 330 0
- 930 00da 024A     		ldr	r2, .L89+4
- 931 00dc 1370     		strb	r3, [r2]
- 932              	.L73:
- 933 00de 7047     		bx	lr
- 934              	.L90:
- 935              		.align	2
- 936              	.L89:
- 937 00e0 00000000 		.word	stageState
- 938 00e4 00000000 		.word	stageNextState
- 939 00e8 00000000 		.word	window
- 940              		.cfi_endproc
- 941              	.LFE71:
- 943              		.section	.text.windowHandler,"ax",%progbits
- 944              		.align	1
- 945              		.global	windowHandler
- 946              		.syntax unified
- 947              		.thumb
- 948              		.thumb_func
-ARM GAS  /tmp/ccBb3YFA.s 			page 24
+ 916 00c2 0622     		movs	r2, #6
+ 917 00c4 074B     		ldr	r3, .L89+4
+ 918 00c6 1A70     		strb	r2, [r3]
+ 325:Core/Src/window.c ****             break;
+ 919              		.loc 1 325 0
+ 920 00c8 7047     		bx	lr
+ 921              	.L88:
+ 326:Core/Src/window.c **** 
+ 327:Core/Src/window.c ****         case rear_done:
+ 328:Core/Src/window.c ****             if (window[lr].state == idle && window[rr].state == idle)
+ 922              		.loc 1 328 0
+ 923 00ca 074B     		ldr	r3, .L89+8
+ 924 00cc 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
+ 925 00ce 33B9     		cbnz	r3, .L73
+ 926              		.loc 1 328 0 is_stmt 0 discriminator 1
+ 927 00d0 054B     		ldr	r3, .L89+8
+ 928 00d2 9B7F     		ldrb	r3, [r3, #30]	@ zero_extendqisi2
+ 929 00d4 1BB9     		cbnz	r3, .L73
+ 329:Core/Src/window.c ****             {
+ 330:Core/Src/window.c ****                 stageState = ready;
+ 930              		.loc 1 330 0 is_stmt 1
+ 931 00d6 024A     		ldr	r2, .L89
+ 932 00d8 1370     		strb	r3, [r2]
+ 331:Core/Src/window.c ****                 stageNextState = ready;
+ 933              		.loc 1 331 0
+ 934 00da 024A     		ldr	r2, .L89+4
+ 935 00dc 1370     		strb	r3, [r2]
+ 936              	.L73:
+ 937 00de 7047     		bx	lr
+ 938              	.L90:
+ 939              		.align	2
+ 940              	.L89:
+ 941 00e0 00000000 		.word	stageState
+ 942 00e4 00000000 		.word	stageNextState
+ 943 00e8 00000000 		.word	window
+ 944              		.cfi_endproc
+ 945              	.LFE71:
+ 947              		.section	.text.windowHandler,"ax",%progbits
+ARM GAS  /tmp/cczyri0m.s 			page 24
 
 
- 949              		.fpu softvfp
- 951              	windowHandler:
- 952              	.LFB67:
+ 948              		.align	1
+ 949              		.global	windowHandler
+ 950              		.syntax unified
+ 951              		.thumb
+ 952              		.thumb_func
+ 953              		.fpu softvfp
+ 955              	windowHandler:
+ 956              	.LFB67:
   24:Core/Src/window.c ****     eventHandler();
- 953              		.loc 1 24 0
- 954              		.cfi_startproc
- 955              		@ args = 0, pretend = 0, frame = 0
- 956              		@ frame_needed = 0, uses_anonymous_args = 0
- 957 0000 10B5     		push	{r4, lr}
- 958              	.LCFI3:
- 959              		.cfi_def_cfa_offset 8
- 960              		.cfi_offset 4, -8
- 961              		.cfi_offset 14, -4
+ 957              		.loc 1 24 0
+ 958              		.cfi_startproc
+ 959              		@ args = 0, pretend = 0, frame = 0
+ 960              		@ frame_needed = 0, uses_anonymous_args = 0
+ 961 0000 10B5     		push	{r4, lr}
+ 962              	.LCFI3:
+ 963              		.cfi_def_cfa_offset 8
+ 964              		.cfi_offset 4, -8
+ 965              		.cfi_offset 14, -4
   25:Core/Src/window.c ****     stateHandler();
- 962              		.loc 1 25 0
- 963 0002 FFF7FEFF 		bl	eventHandler
- 964              	.LVL80:
+ 966              		.loc 1 25 0
+ 967 0002 FFF7FEFF 		bl	eventHandler
+ 968              	.LVL80:
   26:Core/Src/window.c ****     for (size_t i = 0; i < MAX_WINDOWS; i++)
- 965              		.loc 1 26 0
- 966 0006 FFF7FEFF 		bl	stateHandler
- 967              	.LVL81:
- 968              	.LBB10:
+ 969              		.loc 1 26 0
+ 970 0006 FFF7FEFF 		bl	stateHandler
+ 971              	.LVL81:
+ 972              	.LBB10:
   27:Core/Src/window.c ****     {
- 969              		.loc 1 27 0
- 970 000a 0024     		movs	r4, #0
- 971 000c 08E0     		b	.L92
- 972              	.LVL82:
- 973              	.L93:
+ 973              		.loc 1 27 0
+ 974 000a 0024     		movs	r4, #0
+ 975 000c 08E0     		b	.L92
+ 976              	.LVL82:
+ 977              	.L93:
   29:Core/Src/window.c ****     }
- 974              		.loc 1 29 0 discriminator 3
- 975 000e 04EB8402 		add	r2, r4, r4, lsl #2
- 976 0012 5300     		lsls	r3, r2, #1
- 977 0014 2146     		mov	r1, r4
- 978 0016 0548     		ldr	r0, .L95
- 979 0018 1844     		add	r0, r0, r3
- 980 001a FFF7FEFF 		bl	motorHandler
- 981              	.LVL83:
+ 978              		.loc 1 29 0 discriminator 3
+ 979 000e 04EB8402 		add	r2, r4, r4, lsl #2
+ 980 0012 5300     		lsls	r3, r2, #1
+ 981 0014 2146     		mov	r1, r4
+ 982 0016 0548     		ldr	r0, .L95
+ 983 0018 1844     		add	r0, r0, r3
+ 984 001a FFF7FEFF 		bl	motorHandler
+ 985              	.LVL83:
   27:Core/Src/window.c ****     {
- 982              		.loc 1 27 0 discriminator 3
- 983 001e 0134     		adds	r4, r4, #1
- 984              	.LVL84:
- 985              	.L92:
+ 986              		.loc 1 27 0 discriminator 3
+ 987 001e 0134     		adds	r4, r4, #1
+ 988              	.LVL84:
+ 989              	.L92:
   27:Core/Src/window.c ****     {
- 986              		.loc 1 27 0 is_stmt 0 discriminator 1
- 987 0020 032C     		cmp	r4, #3
- 988 0022 F4D9     		bls	.L93
- 989              	.LBE10:
+ 990              		.loc 1 27 0 is_stmt 0 discriminator 1
+ 991 0020 032C     		cmp	r4, #3
+ 992 0022 F4D9     		bls	.L93
+ 993              	.LBE10:
   31:Core/Src/window.c **** }
- 990              		.loc 1 31 0 is_stmt 1
- 991 0024 FFF7FEFF 		bl	staging
- 992              	.LVL85:
- 993 0028 10BD     		pop	{r4, pc}
- 994              	.LVL86:
- 995              	.L96:
- 996 002a 00BF     		.align	2
- 997              	.L95:
- 998 002c 00000000 		.word	window
-ARM GAS  /tmp/ccBb3YFA.s 			page 25
+ 994              		.loc 1 31 0 is_stmt 1
+ 995 0024 FFF7FEFF 		bl	staging
+ 996              	.LVL85:
+ 997 0028 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/cczyri0m.s 			page 25
 
 
- 999              		.cfi_endproc
- 1000              	.LFE67:
- 1002              		.comm	window,40,4
- 1003              		.comm	stageNextState,1,1
- 1004              		.comm	stageState,1,1
- 1005              		.comm	motorCurrent,32,4
- 1006              		.comm	te,10,4
- 1007              		.comm	txCycle,4,4
- 1008              		.comm	canTx,8,4
- 1009              		.comm	canMailbox,4,4
- 1010              		.comm	canRx,8,4
- 1011              		.comm	txMsgExt,24,4
- 1012              		.comm	txMsg,24,4
- 1013              		.comm	rxMsg,28,4
- 1014              		.comm	event,40,4
- 1015              		.comm	data,40,4
- 1016              		.comm	hcan,40,4
- 1017              		.text
- 1018              	.Letext0:
- 1019              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 1020              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 1021              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 1022              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 1023              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 1024              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 1025              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 1026              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
- 1027              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 1028              		.file 11 "/usr/include/newlib/sys/lock.h"
- 1029              		.file 12 "/usr/include/newlib/sys/_types.h"
- 1030              		.file 13 "/usr/include/newlib/sys/reent.h"
- 1031              		.file 14 "Core/Inc/can_setup.h"
- 1032              		.file 15 "Core/Inc/encoder.h"
- 1033              		.file 16 "Core/Inc/window.h"
- 1034              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  /tmp/ccBb3YFA.s 			page 26
+ 998              	.LVL86:
+ 999              	.L96:
+ 1000 002a 00BF     		.align	2
+ 1001              	.L95:
+ 1002 002c 00000000 		.word	window
+ 1003              		.cfi_endproc
+ 1004              	.LFE67:
+ 1006              		.comm	window,40,4
+ 1007              		.comm	stageNextState,1,1
+ 1008              		.comm	stageState,1,1
+ 1009              		.comm	motorCurrent,32,4
+ 1010              		.comm	te,10,4
+ 1011              		.comm	txCycle,4,4
+ 1012              		.comm	canTx,8,4
+ 1013              		.comm	canMailbox,4,4
+ 1014              		.comm	canRx,8,4
+ 1015              		.comm	txMsgExt,24,4
+ 1016              		.comm	txMsg,24,4
+ 1017              		.comm	rxMsg,28,4
+ 1018              		.comm	event,40,4
+ 1019              		.comm	data,40,4
+ 1020              		.comm	hcan,40,4
+ 1021              		.text
+ 1022              	.Letext0:
+ 1023              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 1024              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 1025              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 1026              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 1027              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 1028              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 1029              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 1030              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 1031              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 1032              		.file 11 "/usr/include/newlib/sys/lock.h"
+ 1033              		.file 12 "/usr/include/newlib/sys/_types.h"
+ 1034              		.file 13 "/usr/include/newlib/sys/reent.h"
+ 1035              		.file 14 "Core/Inc/can_setup.h"
+ 1036              		.file 15 "Core/Inc/encoder.h"
+ 1037              		.file 16 "Core/Inc/window.h"
+ 1038              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ARM GAS  /tmp/cczyri0m.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 window.c
-     /tmp/ccBb3YFA.s:16     .text.windowInit:0000000000000000 $t
-     /tmp/ccBb3YFA.s:23     .text.windowInit:0000000000000000 windowInit
-     /tmp/ccBb3YFA.s:133    .text.windowInit:0000000000000064 $d
+     /tmp/cczyri0m.s:16     .text.windowInit:0000000000000000 $t
+     /tmp/cczyri0m.s:23     .text.windowInit:0000000000000000 windowInit
+     /tmp/cczyri0m.s:133    .text.windowInit:0000000000000064 $d
                             *COM*:0000000000000028 window
                             *COM*:0000000000000020 motorCurrent
                             *COM*:0000000000000001 stageState
                             *COM*:0000000000000001 stageNextState
-     /tmp/ccBb3YFA.s:141    .text.stateHandler:0000000000000000 $t
-     /tmp/ccBb3YFA.s:148    .text.stateHandler:0000000000000000 stateHandler
-     /tmp/ccBb3YFA.s:266    .text.stateHandler:0000000000000098 $d
-     /tmp/ccBb3YFA.s:272    .text.motorHandler:0000000000000000 $t
-     /tmp/ccBb3YFA.s:279    .text.motorHandler:0000000000000000 motorHandler
-     /tmp/ccBb3YFA.s:299    .text.motorHandler:000000000000000e $d
-     /tmp/ccBb3YFA.s:303    .text.motorHandler:0000000000000012 $t
-     /tmp/ccBb3YFA.s:566    .text.motorHandler:0000000000000180 $d
-     /tmp/ccBb3YFA.s:571    .text.eventHandler:0000000000000000 $t
-     /tmp/ccBb3YFA.s:578    .text.eventHandler:0000000000000000 eventHandler
-     /tmp/ccBb3YFA.s:615    .text.eventHandler:0000000000000030 $d
-     /tmp/ccBb3YFA.s:623    .text.eventHandler:0000000000000050 $t
-     /tmp/ccBb3YFA.s:743    .text.eventHandler:00000000000000e4 $d
+     /tmp/cczyri0m.s:141    .text.stateHandler:0000000000000000 $t
+     /tmp/cczyri0m.s:148    .text.stateHandler:0000000000000000 stateHandler
+     /tmp/cczyri0m.s:266    .text.stateHandler:0000000000000098 $d
+     /tmp/cczyri0m.s:272    .text.motorHandler:0000000000000000 $t
+     /tmp/cczyri0m.s:279    .text.motorHandler:0000000000000000 motorHandler
+     /tmp/cczyri0m.s:299    .text.motorHandler:000000000000000e $d
+     /tmp/cczyri0m.s:303    .text.motorHandler:0000000000000012 $t
+     /tmp/cczyri0m.s:566    .text.motorHandler:0000000000000180 $d
+     /tmp/cczyri0m.s:571    .text.eventHandler:0000000000000000 $t
+     /tmp/cczyri0m.s:578    .text.eventHandler:0000000000000000 eventHandler
+     /tmp/cczyri0m.s:615    .text.eventHandler:0000000000000030 $d
+     /tmp/cczyri0m.s:623    .text.eventHandler:0000000000000050 $t
+     /tmp/cczyri0m.s:746    .text.eventHandler:00000000000000e8 $d
                             *COM*:000000000000000a te
-     /tmp/ccBb3YFA.s:751    .text.staging:0000000000000000 $t
-     /tmp/ccBb3YFA.s:758    .text.staging:0000000000000000 staging
-     /tmp/ccBb3YFA.s:779    .text.staging:0000000000000018 $d
-     /tmp/ccBb3YFA.s:862    .text.staging:0000000000000086 $d
-     /tmp/ccBb3YFA.s:937    .text.staging:00000000000000e0 $d
-     /tmp/ccBb3YFA.s:944    .text.windowHandler:0000000000000000 $t
-     /tmp/ccBb3YFA.s:951    .text.windowHandler:0000000000000000 windowHandler
-     /tmp/ccBb3YFA.s:998    .text.windowHandler:000000000000002c $d
+     /tmp/cczyri0m.s:755    .text.staging:0000000000000000 $t
+     /tmp/cczyri0m.s:762    .text.staging:0000000000000000 staging
+     /tmp/cczyri0m.s:783    .text.staging:0000000000000018 $d
+     /tmp/cczyri0m.s:866    .text.staging:0000000000000086 $d
+     /tmp/cczyri0m.s:941    .text.staging:00000000000000e0 $d
+     /tmp/cczyri0m.s:948    .text.windowHandler:0000000000000000 $t
+     /tmp/cczyri0m.s:955    .text.windowHandler:0000000000000000 windowHandler
+     /tmp/cczyri0m.s:1002   .text.windowHandler:000000000000002c $d
                             *COM*:0000000000000004 txCycle
                             *COM*:0000000000000008 canTx
                             *COM*:0000000000000004 canMailbox
@@ -1521,10 +1526,10 @@ DEFINED SYMBOLS
                             *COM*:0000000000000028 data
                             *COM*:0000000000000028 hcan
                      .debug_frame:0000000000000010 $d
-     /tmp/ccBb3YFA.s:786    .text.staging:000000000000001f $d
-     /tmp/ccBb3YFA.s:786    .text.staging:0000000000000020 $t
-     /tmp/ccBb3YFA.s:869    .text.staging:000000000000008d $d
-     /tmp/ccBb3YFA.s:869    .text.staging:000000000000008e $t
+     /tmp/cczyri0m.s:790    .text.staging:000000000000001f $d
+     /tmp/cczyri0m.s:790    .text.staging:0000000000000020 $t
+     /tmp/cczyri0m.s:873    .text.staging:000000000000008d $d
+     /tmp/cczyri0m.s:873    .text.staging:000000000000008e $t
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

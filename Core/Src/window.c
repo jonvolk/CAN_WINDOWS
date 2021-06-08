@@ -241,6 +241,7 @@ void eventHandler(void)
     if (te.tap >= TAP_ANY)
     {
         stageState = ready;
+        stageNextState = ready;
         for (size_t i = 0; i < 4; i++)
         {
             window[i].state = idle;
