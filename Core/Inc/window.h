@@ -5,7 +5,7 @@
 #include "encoder.h"
 
 #define MAX_WINDOWS 4
-#define SENSE_LIMIT 1590 // 12 bit ADC, maxl value 4095, WAS 1590
+#define SENSE_LIMIT 1590 // 12 bit ADC, max value 4095
 #define MAX_COUNT 6
 
 
@@ -46,8 +46,10 @@ typedef enum staging
     ready,
     all_down,
     all_up,
-    fronts,
-    rears,
+    front_run,
+    front_done,
+    rear_run,
+    rear_done,
 } staging_t;
 
 

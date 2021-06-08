@@ -245,13 +245,8 @@ void eventHandler(void)
         {
             window[i].state = idle;
         }
-        
     }
 }
-
-
-
-
 
 void staging(void)
 {
@@ -259,32 +254,41 @@ void staging(void)
     {
 
     case ready:
-
         break;
 
     case all_up:
-        stageNextState = rears;
+
         switch (stageNextState)
         {
-        case rears:
+        case ready:
+            stageNextState = rear_run;
+            break;
+
+        case rear_run:
             window[lr].state = up;
             window[rr].state = up;
+            stageNextState = rear_done;
+            break;
 
+        case rear_done:
             if (window[lr].state == idle && window[rr].state == idle)
             {
-                stageNextState = fronts;
+                stageNextState = front_run;
             }
-
             break;
-        case fronts:
+
+        case front_run:
             window[lf].state = up;
             window[rf].state = up;
+            stageNextState = front_done;
+            break;
 
+        case front_done:
             if (window[lf].state == idle && window[rf].state == idle)
             {
                 stageState = ready;
+                stageNextState = ready;
             }
-
             break;
 
         default:
@@ -293,28 +297,38 @@ void staging(void)
 
         break;
     case all_down:
-        stageNextState = fronts;
+
         switch (stageNextState)
         {
-        case fronts:
+        case ready:
+            stageNextState = front_run;
+            break;
+
+        case front_run:
             window[lf].state = down;
             window[rf].state = down;
+            stageNextState = front_done;
+            break;
 
+        case front_done:
             if (window[lf].state == idle && window[rf].state == idle)
             {
-                stageNextState = rears;
+                stageNextState = rear_run;
             }
-
             break;
-        case rears:
+
+        case rear_run:
             window[lr].state = down;
             window[rr].state = down;
+            stageNextState = rear_done;
+            break;
 
+        case rear_done:
             if (window[lr].state == idle && window[rr].state == idle)
             {
                 stageState = ready;
+                stageNextState = ready;
             }
-
             break;
 
         default:
