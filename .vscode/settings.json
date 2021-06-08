@@ -1,0 +1,7 @@
+{
+    "stm32-for-vscode.openOCDPath": "openocd",
+    "stm32-for-vscode.makePath": "make",
+    "stm32-for-vscode.armToolchainPath": "/usr/bin",
+    "cortex-debug.armToolchainPath": "/usr/bin",
+    "cortex-debug.openocdPath": "/usr/local/bin/openocd"
+}

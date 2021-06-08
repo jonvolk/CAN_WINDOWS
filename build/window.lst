@@ -1,0 +1,1352 @@
+ARM GAS  /tmp/ccviwRRs.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"window.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.windowInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	windowInit
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	windowInit:
+  24              	.LFB66:
+  25              		.file 1 "Core/Src/window.c"
+   1:Core/Src/window.c **** #include "window.h"
+   2:Core/Src/window.c **** #include "main.h"
+   3:Core/Src/window.c **** 
+   4:Core/Src/window.c **** void windowInit(void)
+   5:Core/Src/window.c **** {
+  26              		.loc 1 5 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31              	.LVL0:
+  32              	.LBB2:
+   6:Core/Src/window.c ****     for (size_t i = 0; i < MAX_WINDOWS; i++)
+  33              		.loc 1 6 0
+  34 0000 0021     		movs	r1, #0
+  35              	.LVL1:
+  36 0002 0329     		cmp	r1, #3
+  37 0004 1FD8     		bhi	.L13
+  38              	.LBE2:
+   5:Core/Src/window.c ****     for (size_t i = 0; i < MAX_WINDOWS; i++)
+  39              		.loc 1 5 0
+  40 0006 10B4     		push	{r4}
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 4
+  43              		.cfi_offset 4, -4
+  44              	.L3:
+  45              	.LBB3:
+   7:Core/Src/window.c ****     {
+   8:Core/Src/window.c ****         window[i].event = 0;
+  46              		.loc 1 8 0 discriminator 3
+  47 0008 164C     		ldr	r4, .L14
+  48 000a 8B00     		lsls	r3, r1, #2
+  49 000c 0B44     		add	r3, r3, r1
+ARM GAS  /tmp/ccviwRRs.s 			page 2
+
+
+  50 000e 5800     		lsls	r0, r3, #1
+  51 0010 2218     		adds	r2, r4, r0
+  52 0012 0023     		movs	r3, #0
+  53 0014 5370     		strb	r3, [r2, #1]
+   9:Core/Src/window.c ****         window[i].state = 0;
+  54              		.loc 1 9 0 discriminator 3
+  55 0016 2354     		strb	r3, [r4, r0]
+  10:Core/Src/window.c ****         window[i].sense_D = 0;
+  56              		.loc 1 10 0 discriminator 3
+  57 0018 9380     		strh	r3, [r2, #4]	@ movhi
+  11:Core/Src/window.c ****         window[i].sense_U = 0;
+  58              		.loc 1 11 0 discriminator 3
+  59 001a 5380     		strh	r3, [r2, #2]	@ movhi
+  12:Core/Src/window.c ****         window[i].senseCount_D = 0;
+  60              		.loc 1 12 0 discriminator 3
+  61 001c 1381     		strh	r3, [r2, #8]	@ movhi
+  13:Core/Src/window.c ****         window[i].senseCount_U = 0;
+  62              		.loc 1 13 0 discriminator 3
+  63 001e D380     		strh	r3, [r2, #6]	@ movhi
+   6:Core/Src/window.c ****     {
+  64              		.loc 1 6 0 discriminator 3
+  65 0020 0131     		adds	r1, r1, #1
+  66              	.LVL2:
+  67 0022 0329     		cmp	r1, #3
+  68 0024 F0D9     		bls	.L3
+  69 0026 0023     		movs	r3, #0
+  70 0028 04E0     		b	.L4
+  71              	.LVL3:
+  72              	.L5:
+  73              	.LBE3:
+  74              	.LBB4:
+  14:Core/Src/window.c ****     }
+  15:Core/Src/window.c ****     for (size_t i = 0; i < 8; i++)
+  16:Core/Src/window.c ****     {
+  17:Core/Src/window.c ****         motorCurrent[i] = 0;
+  75              		.loc 1 17 0 discriminator 3
+  76 002a 0021     		movs	r1, #0
+  77 002c 0E4A     		ldr	r2, .L14+4
+  78 002e 42F82310 		str	r1, [r2, r3, lsl #2]
+  15:Core/Src/window.c ****     {
+  79              		.loc 1 15 0 discriminator 3
+  80 0032 0133     		adds	r3, r3, #1
+  81              	.LVL4:
+  82              	.L4:
+  15:Core/Src/window.c ****     {
+  83              		.loc 1 15 0 is_stmt 0 discriminator 1
+  84 0034 072B     		cmp	r3, #7
+  85 0036 F8D9     		bls	.L5
+  86              	.LBE4:
+  18:Core/Src/window.c ****     }
+  19:Core/Src/window.c ****     stageState = ready;
+  87              		.loc 1 19 0 is_stmt 1
+  88 0038 0023     		movs	r3, #0
+  89              	.LVL5:
+  90 003a 0C4A     		ldr	r2, .L14+8
+  91 003c 1370     		strb	r3, [r2]
+  20:Core/Src/window.c ****     stageNextState = 0;
+ARM GAS  /tmp/ccviwRRs.s 			page 3
+
+
+  92              		.loc 1 20 0
+  93 003e 0C4A     		ldr	r2, .L14+12
+  94 0040 1370     		strb	r3, [r2]
+  21:Core/Src/window.c **** }
+  95              		.loc 1 21 0
+  96 0042 10BC     		pop	{r4}
+  97              	.LCFI1:
+  98              		.cfi_restore 4
+  99              		.cfi_def_cfa_offset 0
+ 100 0044 7047     		bx	lr
+ 101              	.LVL6:
+ 102              	.L13:
+ 103              	.LBB5:
+ 104 0046 0023     		movs	r3, #0
+ 105 0048 04E0     		b	.L9
+ 106              	.LVL7:
+ 107              	.L10:
+ 108              	.LBE5:
+ 109              	.LBB6:
+  17:Core/Src/window.c ****     }
+ 110              		.loc 1 17 0
+ 111 004a 0021     		movs	r1, #0
+ 112 004c 064A     		ldr	r2, .L14+4
+ 113 004e 42F82310 		str	r1, [r2, r3, lsl #2]
+  15:Core/Src/window.c ****     {
+ 114              		.loc 1 15 0
+ 115 0052 0133     		adds	r3, r3, #1
+ 116              	.LVL8:
+ 117              	.L9:
+ 118 0054 072B     		cmp	r3, #7
+ 119 0056 F8D9     		bls	.L10
+ 120              	.LBE6:
+  19:Core/Src/window.c ****     stageNextState = 0;
+ 121              		.loc 1 19 0
+ 122 0058 0023     		movs	r3, #0
+ 123              	.LVL9:
+ 124 005a 044A     		ldr	r2, .L14+8
+ 125 005c 1370     		strb	r3, [r2]
+  20:Core/Src/window.c **** }
+ 126              		.loc 1 20 0
+ 127 005e 044A     		ldr	r2, .L14+12
+ 128 0060 1370     		strb	r3, [r2]
+ 129 0062 7047     		bx	lr
+ 130              	.L15:
+ 131              		.align	2
+ 132              	.L14:
+ 133 0064 00000000 		.word	window
+ 134 0068 00000000 		.word	motorCurrent
+ 135 006c 00000000 		.word	stageState
+ 136 0070 00000000 		.word	stageNextState
+ 137              		.cfi_endproc
+ 138              	.LFE66:
+ 140              		.section	.text.stateHandler,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	stateHandler
+ 143              		.syntax unified
+ 144              		.thumb
+ARM GAS  /tmp/ccviwRRs.s 			page 4
+
+
+ 145              		.thumb_func
+ 146              		.fpu softvfp
+ 148              	stateHandler:
+ 149              	.LFB68:
+  22:Core/Src/window.c **** 
+  23:Core/Src/window.c **** void windowHandler(void)
+  24:Core/Src/window.c **** {
+  25:Core/Src/window.c ****     eventHandler();
+  26:Core/Src/window.c ****     stateHandler();
+  27:Core/Src/window.c ****     for (size_t i = 0; i < MAX_WINDOWS; i++)
+  28:Core/Src/window.c ****     {
+  29:Core/Src/window.c ****         motorHandler(&window[i], i);
+  30:Core/Src/window.c ****     }
+  31:Core/Src/window.c ****     staging();
+  32:Core/Src/window.c **** }
+  33:Core/Src/window.c **** 
+  34:Core/Src/window.c **** void stateHandler(void)
+  35:Core/Src/window.c **** {
+ 150              		.loc 1 35 0
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+  36:Core/Src/window.c ****     window[lr].sense_U = motorCurrent[0];
+ 155              		.loc 1 36 0
+ 156 0000 254A     		ldr	r2, .L27
+ 157 0002 1168     		ldr	r1, [r2]
+ 158 0004 254B     		ldr	r3, .L27+4
+ 159 0006 9981     		strh	r1, [r3, #12]	@ movhi
+  37:Core/Src/window.c ****     window[lr].sense_D = motorCurrent[1];
+ 160              		.loc 1 37 0
+ 161 0008 5168     		ldr	r1, [r2, #4]
+ 162 000a D981     		strh	r1, [r3, #14]	@ movhi
+  38:Core/Src/window.c ****     window[rr].sense_U = motorCurrent[2];
+ 163              		.loc 1 38 0
+ 164 000c 9168     		ldr	r1, [r2, #8]
+ 165 000e 1984     		strh	r1, [r3, #32]	@ movhi
+  39:Core/Src/window.c ****     window[rr].sense_D = motorCurrent[3];
+ 166              		.loc 1 39 0
+ 167 0010 D168     		ldr	r1, [r2, #12]
+ 168 0012 5984     		strh	r1, [r3, #34]	@ movhi
+  40:Core/Src/window.c ****     window[lf].sense_U = motorCurrent[4];
+ 169              		.loc 1 40 0
+ 170 0014 1169     		ldr	r1, [r2, #16]
+ 171 0016 5980     		strh	r1, [r3, #2]	@ movhi
+  41:Core/Src/window.c ****     window[lf].sense_D = motorCurrent[5];
+ 172              		.loc 1 41 0
+ 173 0018 5169     		ldr	r1, [r2, #20]
+ 174 001a 9980     		strh	r1, [r3, #4]	@ movhi
+  42:Core/Src/window.c ****     window[rf].sense_U = motorCurrent[6];
+ 175              		.loc 1 42 0
+ 176 001c 9169     		ldr	r1, [r2, #24]
+ 177 001e D982     		strh	r1, [r3, #22]	@ movhi
+  43:Core/Src/window.c ****     window[rf].sense_D = motorCurrent[7];
+ 178              		.loc 1 43 0
+ 179 0020 D269     		ldr	r2, [r2, #28]
+ 180 0022 1A83     		strh	r2, [r3, #24]	@ movhi
+ARM GAS  /tmp/ccviwRRs.s 			page 5
+
+
+ 181              	.LVL10:
+ 182              	.LBB7:
+  44:Core/Src/window.c **** 
+  45:Core/Src/window.c ****     for (size_t i = 0; i < 4; i++)
+ 183              		.loc 1 45 0
+ 184 0024 0023     		movs	r3, #0
+ 185 0026 07E0     		b	.L17
+ 186              	.LVL11:
+ 187              	.L18:
+  46:Core/Src/window.c ****     {
+  47:Core/Src/window.c ****         if (window[i].sense_U >= SENSE_LIMIT)
+  48:Core/Src/window.c ****         {
+  49:Core/Src/window.c ****             window[i].senseCount_U++;
+  50:Core/Src/window.c ****         }
+  51:Core/Src/window.c ****         else if (window[i].sense_U < SENSE_LIMIT)
+  52:Core/Src/window.c ****         {
+  53:Core/Src/window.c ****             window[i].senseCount_U = 0;
+ 188              		.loc 1 53 0
+ 189 0028 03EB8302 		add	r2, r3, r3, lsl #2
+ 190 002c 5100     		lsls	r1, r2, #1
+ 191 002e 1B4A     		ldr	r2, .L27+4
+ 192 0030 0A44     		add	r2, r2, r1
+ 193 0032 0021     		movs	r1, #0
+ 194 0034 D180     		strh	r1, [r2, #6]	@ movhi
+ 195              	.L19:
+  45:Core/Src/window.c ****     {
+ 196              		.loc 1 45 0 discriminator 2
+ 197 0036 0133     		adds	r3, r3, #1
+ 198              	.LVL12:
+ 199              	.L17:
+  45:Core/Src/window.c ****     {
+ 200              		.loc 1 45 0 is_stmt 0 discriminator 1
+ 201 0038 032B     		cmp	r3, #3
+ 202 003a 12D8     		bhi	.L25
+  47:Core/Src/window.c ****         {
+ 203              		.loc 1 47 0 is_stmt 1
+ 204 003c 03EB8302 		add	r2, r3, r3, lsl #2
+ 205 0040 5100     		lsls	r1, r2, #1
+ 206 0042 164A     		ldr	r2, .L27+4
+ 207 0044 0A44     		add	r2, r2, r1
+ 208 0046 5188     		ldrh	r1, [r2, #2]
+ 209 0048 40F23562 		movw	r2, #1589
+ 210 004c 9142     		cmp	r1, r2
+ 211 004e EBD9     		bls	.L18
+  49:Core/Src/window.c ****         }
+ 212              		.loc 1 49 0
+ 213 0050 9900     		lsls	r1, r3, #2
+ 214 0052 1944     		add	r1, r1, r3
+ 215 0054 4800     		lsls	r0, r1, #1
+ 216 0056 114A     		ldr	r2, .L27+4
+ 217 0058 0244     		add	r2, r2, r0
+ 218 005a D188     		ldrh	r1, [r2, #6]
+ 219 005c 0131     		adds	r1, r1, #1
+ 220 005e D180     		strh	r1, [r2, #6]	@ movhi
+ 221 0060 E9E7     		b	.L19
+ 222              	.L25:
+ 223 0062 0023     		movs	r3, #0
+ARM GAS  /tmp/ccviwRRs.s 			page 6
+
+
+ 224              	.LVL13:
+ 225 0064 06E0     		b	.L21
+ 226              	.LVL14:
+ 227              	.L22:
+ 228              	.LBE7:
+ 229              	.LBB8:
+  54:Core/Src/window.c ****         }
+  55:Core/Src/window.c ****         else if (window[i].sense_D >= SENSE_LIMIT)
+  56:Core/Src/window.c ****         {
+  57:Core/Src/window.c ****             window[i].senseCount_D++;
+  58:Core/Src/window.c ****         }
+  59:Core/Src/window.c ****         else if (window[i].sense_D < SENSE_LIMIT)
+  60:Core/Src/window.c ****         {
+  61:Core/Src/window.c ****             window[i].senseCount_D = 0;
+  62:Core/Src/window.c ****         }
+  63:Core/Src/window.c ****     }
+  64:Core/Src/window.c **** 
+  65:Core/Src/window.c ****     for (size_t i = 0; i < 4; i++)
+  66:Core/Src/window.c ****     {
+  67:Core/Src/window.c ****         if (window[i].senseCount_U >= MAX_COUNT || window[i].senseCount_D >= MAX_COUNT)
+  68:Core/Src/window.c ****         {
+  69:Core/Src/window.c ****             window[i].state = idle;
+ 230              		.loc 1 69 0
+ 231 0066 03EB8301 		add	r1, r3, r3, lsl #2
+ 232 006a 4A00     		lsls	r2, r1, #1
+ 233 006c 0020     		movs	r0, #0
+ 234 006e 0B49     		ldr	r1, .L27+4
+ 235 0070 8854     		strb	r0, [r1, r2]
+ 236              	.L23:
+  65:Core/Src/window.c ****     {
+ 237              		.loc 1 65 0 discriminator 2
+ 238 0072 0133     		adds	r3, r3, #1
+ 239              	.LVL15:
+ 240              	.L21:
+  65:Core/Src/window.c ****     {
+ 241              		.loc 1 65 0 is_stmt 0 discriminator 1
+ 242 0074 032B     		cmp	r3, #3
+ 243 0076 0DD8     		bhi	.L26
+  67:Core/Src/window.c ****         {
+ 244              		.loc 1 67 0 is_stmt 1
+ 245 0078 03EB8302 		add	r2, r3, r3, lsl #2
+ 246 007c 5100     		lsls	r1, r2, #1
+ 247 007e 074A     		ldr	r2, .L27+4
+ 248 0080 0A44     		add	r2, r2, r1
+ 249 0082 D288     		ldrh	r2, [r2, #6]
+ 250 0084 052A     		cmp	r2, #5
+ 251 0086 EED8     		bhi	.L22
+  67:Core/Src/window.c ****         {
+ 252              		.loc 1 67 0 is_stmt 0 discriminator 1
+ 253 0088 044A     		ldr	r2, .L27+4
+ 254 008a 0A44     		add	r2, r2, r1
+ 255 008c 1289     		ldrh	r2, [r2, #8]
+ 256 008e 052A     		cmp	r2, #5
+ 257 0090 EFD9     		bls	.L23
+ 258 0092 E8E7     		b	.L22
+ 259              	.L26:
+ 260              	.LBE8:
+ARM GAS  /tmp/ccviwRRs.s 			page 7
+
+
+  70:Core/Src/window.c ****         }
+  71:Core/Src/window.c ****     }
+  72:Core/Src/window.c **** }
+ 261              		.loc 1 72 0 is_stmt 1
+ 262 0094 7047     		bx	lr
+ 263              	.L28:
+ 264 0096 00BF     		.align	2
+ 265              	.L27:
+ 266 0098 00000000 		.word	motorCurrent
+ 267 009c 00000000 		.word	window
+ 268              		.cfi_endproc
+ 269              	.LFE68:
+ 271              		.section	.text.motorHandler,"ax",%progbits
+ 272              		.align	1
+ 273              		.global	motorHandler
+ 274              		.syntax unified
+ 275              		.thumb
+ 276              		.thumb_func
+ 277              		.fpu softvfp
+ 279              	motorHandler:
+ 280              	.LFB69:
+  73:Core/Src/window.c **** 
+  74:Core/Src/window.c **** void motorHandler(windowHandle_t *window, int instance)
+  75:Core/Src/window.c **** {
+ 281              		.loc 1 75 0
+ 282              		.cfi_startproc
+ 283              		@ args = 0, pretend = 0, frame = 0
+ 284              		@ frame_needed = 0, uses_anonymous_args = 0
+ 285              	.LVL16:
+ 286 0000 10B5     		push	{r4, lr}
+ 287              	.LCFI2:
+ 288              		.cfi_def_cfa_offset 8
+ 289              		.cfi_offset 4, -8
+ 290              		.cfi_offset 14, -4
+  76:Core/Src/window.c ****     int state = window->state;
+ 291              		.loc 1 76 0
+ 292 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 293              	.LVL17:
+  77:Core/Src/window.c ****     switch (instance)
+ 294              		.loc 1 77 0
+ 295 0004 0329     		cmp	r1, #3
+ 296 0006 00F2BA80 		bhi	.L29
+ 297 000a DFE801F0 		tbb	[pc, r1]
+ 298              	.L32:
+ 299 000e 02       		.byte	(.L31-.L32)/2
+ 300 000f 2C       		.byte	(.L33-.L32)/2
+ 301 0010 5C       		.byte	(.L34-.L32)/2
+ 302 0011 89       		.byte	(.L35-.L32)/2
+ 303              		.p2align 1
+ 304              	.L31:
+  78:Core/Src/window.c ****     {
+  79:Core/Src/window.c ****     case lf:
+  80:Core/Src/window.c ****         switch (state)
+ 305              		.loc 1 80 0
+ 306 0012 012B     		cmp	r3, #1
+ 307 0014 0FD0     		beq	.L36
+ 308 0016 13B1     		cbz	r3, .L37
+ARM GAS  /tmp/ccviwRRs.s 			page 8
+
+
+ 309 0018 022B     		cmp	r3, #2
+ 310 001a 18D0     		beq	.L38
+ 311 001c 10BD     		pop	{r4, pc}
+ 312              	.L37:
+  81:Core/Src/window.c ****         {
+  82:Core/Src/window.c ****         case idle:
+  83:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_U_GPIO_Port, LF_U_Pin, RESET);
+ 313              		.loc 1 83 0
+ 314 001e 584C     		ldr	r4, .L49
+ 315 0020 0022     		movs	r2, #0
+ 316 0022 0121     		movs	r1, #1
+ 317              	.LVL18:
+ 318 0024 2046     		mov	r0, r4
+ 319              	.LVL19:
+ 320 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 321              	.LVL20:
+  84:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_D_GPIO_Port, LF_D_Pin, RESET);
+ 322              		.loc 1 84 0
+ 323 002a 0022     		movs	r2, #0
+ 324 002c 0221     		movs	r1, #2
+ 325 002e 2046     		mov	r0, r4
+ 326 0030 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 327              	.LVL21:
+  85:Core/Src/window.c ****             break;
+ 328              		.loc 1 85 0
+ 329 0034 10BD     		pop	{r4, pc}
+ 330              	.LVL22:
+ 331              	.L36:
+  86:Core/Src/window.c ****         case up:
+  87:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_U_GPIO_Port, LF_U_Pin, RESET);
+ 332              		.loc 1 87 0
+ 333 0036 524C     		ldr	r4, .L49
+ 334 0038 0022     		movs	r2, #0
+ 335 003a 0121     		movs	r1, #1
+ 336              	.LVL23:
+ 337 003c 2046     		mov	r0, r4
+ 338              	.LVL24:
+ 339 003e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 340              	.LVL25:
+  88:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_D_GPIO_Port, LF_D_Pin, SET);
+ 341              		.loc 1 88 0
+ 342 0042 0122     		movs	r2, #1
+ 343 0044 0221     		movs	r1, #2
+ 344 0046 2046     		mov	r0, r4
+ 345 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 346              	.LVL26:
+  89:Core/Src/window.c ****             break;
+ 347              		.loc 1 89 0
+ 348 004c 10BD     		pop	{r4, pc}
+ 349              	.LVL27:
+ 350              	.L38:
+  90:Core/Src/window.c ****         case down:
+  91:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_U_GPIO_Port, LF_U_Pin, SET);
+ 351              		.loc 1 91 0
+ 352 004e 4C4C     		ldr	r4, .L49
+ 353 0050 0122     		movs	r2, #1
+ 354 0052 1146     		mov	r1, r2
+ARM GAS  /tmp/ccviwRRs.s 			page 9
+
+
+ 355              	.LVL28:
+ 356 0054 2046     		mov	r0, r4
+ 357              	.LVL29:
+ 358 0056 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 359              	.LVL30:
+  92:Core/Src/window.c ****             HAL_GPIO_WritePin(LF_D_GPIO_Port, LF_D_Pin, RESET);
+ 360              		.loc 1 92 0
+ 361 005a 0022     		movs	r2, #0
+ 362 005c 0221     		movs	r1, #2
+ 363 005e 2046     		mov	r0, r4
+ 364 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 365              	.LVL31:
+  93:Core/Src/window.c ****             break;
+ 366              		.loc 1 93 0
+ 367 0064 10BD     		pop	{r4, pc}
+ 368              	.LVL32:
+ 369              	.L33:
+  94:Core/Src/window.c ****         default:
+  95:Core/Src/window.c ****             break;
+  96:Core/Src/window.c ****         }
+  97:Core/Src/window.c ****         break;
+  98:Core/Src/window.c ****     case lr:
+  99:Core/Src/window.c ****         switch (state)
+ 370              		.loc 1 99 0
+ 371 0066 012B     		cmp	r3, #1
+ 372 0068 11D0     		beq	.L39
+ 373 006a 13B1     		cbz	r3, .L40
+ 374 006c 022B     		cmp	r3, #2
+ 375 006e 1CD0     		beq	.L41
+ 376 0070 10BD     		pop	{r4, pc}
+ 377              	.L40:
+ 100:Core/Src/window.c ****         {
+ 101:Core/Src/window.c ****         case idle:
+ 102:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_U_GPIO_Port, LR_U_Pin, RESET);
+ 378              		.loc 1 102 0
+ 379 0072 434C     		ldr	r4, .L49
+ 380 0074 0022     		movs	r2, #0
+ 381 0076 4FF48051 		mov	r1, #4096
+ 382              	.LVL33:
+ 383 007a 2046     		mov	r0, r4
+ 384              	.LVL34:
+ 385 007c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 386              	.LVL35:
+ 103:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_D_GPIO_Port, LR_D_Pin, RESET);
+ 387              		.loc 1 103 0
+ 388 0080 0022     		movs	r2, #0
+ 389 0082 4FF48041 		mov	r1, #16384
+ 390 0086 2046     		mov	r0, r4
+ 391 0088 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 392              	.LVL36:
+ 104:Core/Src/window.c ****             break;
+ 393              		.loc 1 104 0
+ 394 008c 10BD     		pop	{r4, pc}
+ 395              	.LVL37:
+ 396              	.L39:
+ 105:Core/Src/window.c ****         case up:
+ 106:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_U_GPIO_Port, LR_U_Pin, RESET);
+ARM GAS  /tmp/ccviwRRs.s 			page 10
+
+
+ 397              		.loc 1 106 0
+ 398 008e 3C4C     		ldr	r4, .L49
+ 399 0090 0022     		movs	r2, #0
+ 400 0092 4FF48051 		mov	r1, #4096
+ 401              	.LVL38:
+ 402 0096 2046     		mov	r0, r4
+ 403              	.LVL39:
+ 404 0098 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 405              	.LVL40:
+ 107:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_D_GPIO_Port, LR_D_Pin, SET);
+ 406              		.loc 1 107 0
+ 407 009c 0122     		movs	r2, #1
+ 408 009e 4FF48041 		mov	r1, #16384
+ 409 00a2 2046     		mov	r0, r4
+ 410 00a4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 411              	.LVL41:
+ 108:Core/Src/window.c ****             break;
+ 412              		.loc 1 108 0
+ 413 00a8 10BD     		pop	{r4, pc}
+ 414              	.LVL42:
+ 415              	.L41:
+ 109:Core/Src/window.c ****         case down:
+ 110:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_U_GPIO_Port, LR_U_Pin, SET);
+ 416              		.loc 1 110 0
+ 417 00aa 354C     		ldr	r4, .L49
+ 418 00ac 0122     		movs	r2, #1
+ 419 00ae 4FF48051 		mov	r1, #4096
+ 420              	.LVL43:
+ 421 00b2 2046     		mov	r0, r4
+ 422              	.LVL44:
+ 423 00b4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 424              	.LVL45:
+ 111:Core/Src/window.c ****             HAL_GPIO_WritePin(LR_D_GPIO_Port, LR_D_Pin, RESET);
+ 425              		.loc 1 111 0
+ 426 00b8 0022     		movs	r2, #0
+ 427 00ba 4FF48041 		mov	r1, #16384
+ 428 00be 2046     		mov	r0, r4
+ 429 00c0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 430              	.LVL46:
+ 112:Core/Src/window.c ****             break;
+ 431              		.loc 1 112 0
+ 432 00c4 10BD     		pop	{r4, pc}
+ 433              	.LVL47:
+ 434              	.L34:
+ 113:Core/Src/window.c ****         default:
+ 114:Core/Src/window.c ****             break;
+ 115:Core/Src/window.c ****         }
+ 116:Core/Src/window.c ****         break;
+ 117:Core/Src/window.c ****     case rf:
+ 118:Core/Src/window.c ****         switch (state)
+ 435              		.loc 1 118 0
+ 436 00c6 012B     		cmp	r3, #1
+ 437 00c8 10D0     		beq	.L42
+ 438 00ca 13B1     		cbz	r3, .L43
+ 439 00cc 022B     		cmp	r3, #2
+ 440 00ce 1AD0     		beq	.L44
+ 441 00d0 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/ccviwRRs.s 			page 11
+
+
+ 442              	.L43:
+ 119:Core/Src/window.c ****         {
+ 120:Core/Src/window.c ****         case idle:
+ 121:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_U_GPIO_Port, RF_U_Pin, RESET);
+ 443              		.loc 1 121 0
+ 444 00d2 2B4C     		ldr	r4, .L49
+ 445 00d4 0022     		movs	r2, #0
+ 446 00d6 0421     		movs	r1, #4
+ 447              	.LVL48:
+ 448 00d8 2046     		mov	r0, r4
+ 449              	.LVL49:
+ 450 00da FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 451              	.LVL50:
+ 122:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_D_GPIO_Port, RF_D_Pin, RESET);
+ 452              		.loc 1 122 0
+ 453 00de 0022     		movs	r2, #0
+ 454 00e0 4FF48061 		mov	r1, #1024
+ 455 00e4 2046     		mov	r0, r4
+ 456 00e6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 457              	.LVL51:
+ 123:Core/Src/window.c ****             break;
+ 458              		.loc 1 123 0
+ 459 00ea 10BD     		pop	{r4, pc}
+ 460              	.LVL52:
+ 461              	.L42:
+ 124:Core/Src/window.c ****         case up:
+ 125:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_U_GPIO_Port, RF_U_Pin, RESET);
+ 462              		.loc 1 125 0
+ 463 00ec 244C     		ldr	r4, .L49
+ 464 00ee 0022     		movs	r2, #0
+ 465 00f0 0421     		movs	r1, #4
+ 466              	.LVL53:
+ 467 00f2 2046     		mov	r0, r4
+ 468              	.LVL54:
+ 469 00f4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 470              	.LVL55:
+ 126:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_D_GPIO_Port, RF_D_Pin, SET);
+ 471              		.loc 1 126 0
+ 472 00f8 0122     		movs	r2, #1
+ 473 00fa 4FF48061 		mov	r1, #1024
+ 474 00fe 2046     		mov	r0, r4
+ 475 0100 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 476              	.LVL56:
+ 127:Core/Src/window.c ****             break;
+ 477              		.loc 1 127 0
+ 478 0104 10BD     		pop	{r4, pc}
+ 479              	.LVL57:
+ 480              	.L44:
+ 128:Core/Src/window.c ****         case down:
+ 129:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_U_GPIO_Port, RF_U_Pin, SET);
+ 481              		.loc 1 129 0
+ 482 0106 1E4C     		ldr	r4, .L49
+ 483 0108 0122     		movs	r2, #1
+ 484 010a 0421     		movs	r1, #4
+ 485              	.LVL58:
+ 486 010c 2046     		mov	r0, r4
+ 487              	.LVL59:
+ARM GAS  /tmp/ccviwRRs.s 			page 12
+
+
+ 488 010e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 489              	.LVL60:
+ 130:Core/Src/window.c ****             HAL_GPIO_WritePin(RF_D_GPIO_Port, RF_D_Pin, RESET);
+ 490              		.loc 1 130 0
+ 491 0112 0022     		movs	r2, #0
+ 492 0114 4FF48061 		mov	r1, #1024
+ 493 0118 2046     		mov	r0, r4
+ 494 011a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 495              	.LVL61:
+ 131:Core/Src/window.c ****             break;
+ 496              		.loc 1 131 0
+ 497 011e 10BD     		pop	{r4, pc}
+ 498              	.LVL62:
+ 499              	.L35:
+ 132:Core/Src/window.c ****         default:
+ 133:Core/Src/window.c ****             break;
+ 134:Core/Src/window.c ****         }
+ 135:Core/Src/window.c ****         break;
+ 136:Core/Src/window.c ****     case rr:
+ 137:Core/Src/window.c ****         switch (state)
+ 500              		.loc 1 137 0
+ 501 0120 012B     		cmp	r3, #1
+ 502 0122 11D0     		beq	.L45
+ 503 0124 13B1     		cbz	r3, .L46
+ 504 0126 022B     		cmp	r3, #2
+ 505 0128 1CD0     		beq	.L47
+ 506 012a 10BD     		pop	{r4, pc}
+ 507              	.L46:
+ 138:Core/Src/window.c ****         {
+ 139:Core/Src/window.c ****         case idle:
+ 140:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_U_GPIO_Port, RR_U_Pin, RESET);
+ 508              		.loc 1 140 0
+ 509 012c 144C     		ldr	r4, .L49
+ 510 012e 0022     		movs	r2, #0
+ 511 0130 4FF40051 		mov	r1, #8192
+ 512              	.LVL63:
+ 513 0134 2046     		mov	r0, r4
+ 514              	.LVL64:
+ 515 0136 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 516              	.LVL65:
+ 141:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_D_GPIO_Port, RR_D_Pin, RESET);
+ 517              		.loc 1 141 0
+ 518 013a 0022     		movs	r2, #0
+ 519 013c 4FF40041 		mov	r1, #32768
+ 520 0140 2046     		mov	r0, r4
+ 521 0142 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 522              	.LVL66:
+ 142:Core/Src/window.c ****             break;
+ 523              		.loc 1 142 0
+ 524 0146 10BD     		pop	{r4, pc}
+ 525              	.LVL67:
+ 526              	.L45:
+ 143:Core/Src/window.c ****         case up:
+ 144:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_U_GPIO_Port, RR_U_Pin, RESET);
+ 527              		.loc 1 144 0
+ 528 0148 0D4C     		ldr	r4, .L49
+ 529 014a 0022     		movs	r2, #0
+ARM GAS  /tmp/ccviwRRs.s 			page 13
+
+
+ 530 014c 4FF40051 		mov	r1, #8192
+ 531              	.LVL68:
+ 532 0150 2046     		mov	r0, r4
+ 533              	.LVL69:
+ 534 0152 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 535              	.LVL70:
+ 145:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_D_GPIO_Port, RR_D_Pin, SET);
+ 536              		.loc 1 145 0
+ 537 0156 0122     		movs	r2, #1
+ 538 0158 4FF40041 		mov	r1, #32768
+ 539 015c 2046     		mov	r0, r4
+ 540 015e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 541              	.LVL71:
+ 146:Core/Src/window.c ****             break;
+ 542              		.loc 1 146 0
+ 543 0162 10BD     		pop	{r4, pc}
+ 544              	.LVL72:
+ 545              	.L47:
+ 147:Core/Src/window.c ****         case down:
+ 148:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_U_GPIO_Port, RR_U_Pin, SET);
+ 546              		.loc 1 148 0
+ 547 0164 064C     		ldr	r4, .L49
+ 548 0166 0122     		movs	r2, #1
+ 549 0168 4FF40051 		mov	r1, #8192
+ 550              	.LVL73:
+ 551 016c 2046     		mov	r0, r4
+ 552              	.LVL74:
+ 553 016e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 554              	.LVL75:
+ 149:Core/Src/window.c ****             HAL_GPIO_WritePin(RR_D_GPIO_Port, RR_D_Pin, RESET);
+ 555              		.loc 1 149 0
+ 556 0172 0022     		movs	r2, #0
+ 557 0174 4FF40041 		mov	r1, #32768
+ 558 0178 2046     		mov	r0, r4
+ 559 017a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 560              	.LVL76:
+ 561              	.L29:
+ 562 017e 10BD     		pop	{r4, pc}
+ 563              	.L50:
+ 564              		.align	2
+ 565              	.L49:
+ 566 0180 000C0140 		.word	1073810432
+ 567              		.cfi_endproc
+ 568              	.LFE69:
+ 570              		.section	.text.eventHandler,"ax",%progbits
+ 571              		.align	1
+ 572              		.global	eventHandler
+ 573              		.syntax unified
+ 574              		.thumb
+ 575              		.thumb_func
+ 576              		.fpu softvfp
+ 578              	eventHandler:
+ 579              	.LFB70:
+ 150:Core/Src/window.c ****             break;
+ 151:Core/Src/window.c ****         default:
+ 152:Core/Src/window.c ****             break;
+ 153:Core/Src/window.c ****         }
+ARM GAS  /tmp/ccviwRRs.s 			page 14
+
+
+ 154:Core/Src/window.c ****         break;
+ 155:Core/Src/window.c ****     default:
+ 156:Core/Src/window.c ****         break;
+ 157:Core/Src/window.c ****     }
+ 158:Core/Src/window.c **** }
+ 159:Core/Src/window.c **** 
+ 160:Core/Src/window.c **** //////////////////////////////////////////////////////////////////////////////////
+ 161:Core/Src/window.c **** 
+ 162:Core/Src/window.c **** void eventHandler(void)
+ 163:Core/Src/window.c **** {
+ 580              		.loc 1 163 0
+ 581              		.cfi_startproc
+ 582              		@ args = 0, pretend = 0, frame = 0
+ 583              		@ frame_needed = 0, uses_anonymous_args = 0
+ 584              		@ link register save eliminated.
+ 164:Core/Src/window.c ****     if (te.currentScreen == 9 && te.valueId == 1)
+ 585              		.loc 1 164 0
+ 586 0000 384B     		ldr	r3, .L71
+ 587 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 588 0004 092B     		cmp	r3, #9
+ 589 0006 05D0     		beq	.L69
+ 590              	.L52:
+ 165:Core/Src/window.c ****     {
+ 166:Core/Src/window.c **** 
+ 167:Core/Src/window.c ****         switch (te.currentVal)
+ 168:Core/Src/window.c ****         {
+ 169:Core/Src/window.c ****         case FRONT_WINDOWS:
+ 170:Core/Src/window.c ****             switch (te.swipe)
+ 171:Core/Src/window.c ****             {
+ 172:Core/Src/window.c ****             case SWIPE_UP:
+ 173:Core/Src/window.c ****                 window[lf].state = up;
+ 174:Core/Src/window.c ****                 window[rf].state = up;
+ 175:Core/Src/window.c ****                 break;
+ 176:Core/Src/window.c ****             case SWIPE_DOWN:
+ 177:Core/Src/window.c ****                 window[lf].state = down;
+ 178:Core/Src/window.c ****                 window[rf].state = down;
+ 179:Core/Src/window.c ****             default:
+ 180:Core/Src/window.c ****                 break;
+ 181:Core/Src/window.c ****             }
+ 182:Core/Src/window.c ****             break;
+ 183:Core/Src/window.c **** 
+ 184:Core/Src/window.c ****         case ALL_WINDOWS:
+ 185:Core/Src/window.c ****             switch (te.swipe)
+ 186:Core/Src/window.c ****             {
+ 187:Core/Src/window.c ****             case SWIPE_UP:
+ 188:Core/Src/window.c ****                 //stageState = all_up;
+ 189:Core/Src/window.c ****                 window[lr].state = up;
+ 190:Core/Src/window.c ****                 window[rr].state = up;
+ 191:Core/Src/window.c ****                 break;
+ 192:Core/Src/window.c ****             case SWIPE_DOWN:
+ 193:Core/Src/window.c ****                 //stageState = all_down;
+ 194:Core/Src/window.c ****                 window[lr].state = down;
+ 195:Core/Src/window.c ****                 window[rr].state = down;
+ 196:Core/Src/window.c **** 
+ 197:Core/Src/window.c ****                 break;
+ 198:Core/Src/window.c ****             default:
+ 199:Core/Src/window.c ****                 break;
+ARM GAS  /tmp/ccviwRRs.s 			page 15
+
+
+ 200:Core/Src/window.c ****             }
+ 201:Core/Src/window.c ****             break;
+ 202:Core/Src/window.c **** 
+ 203:Core/Src/window.c ****         case LF_WINDOW:
+ 204:Core/Src/window.c ****             switch (te.swipe)
+ 205:Core/Src/window.c ****             {
+ 206:Core/Src/window.c ****             case SWIPE_UP:
+ 207:Core/Src/window.c ****                 window[lf].state = up;
+ 208:Core/Src/window.c ****                 break;
+ 209:Core/Src/window.c ****             case SWIPE_DOWN:
+ 210:Core/Src/window.c ****                 window[lf].state = down;
+ 211:Core/Src/window.c ****                 break;
+ 212:Core/Src/window.c **** 
+ 213:Core/Src/window.c ****             default:
+ 214:Core/Src/window.c ****                 break;
+ 215:Core/Src/window.c ****             }
+ 216:Core/Src/window.c ****             break;
+ 217:Core/Src/window.c **** 
+ 218:Core/Src/window.c ****         case RF_WINDOW:
+ 219:Core/Src/window.c ****             switch (te.swipe)
+ 220:Core/Src/window.c ****             {
+ 221:Core/Src/window.c ****             case SWIPE_UP:
+ 222:Core/Src/window.c ****                 window[rf].state = up;
+ 223:Core/Src/window.c ****                 break;
+ 224:Core/Src/window.c ****             case SWIPE_DOWN:
+ 225:Core/Src/window.c ****                 window[rf].state = down;
+ 226:Core/Src/window.c ****                 break;
+ 227:Core/Src/window.c **** 
+ 228:Core/Src/window.c ****             default:
+ 229:Core/Src/window.c ****                 break;
+ 230:Core/Src/window.c ****             }
+ 231:Core/Src/window.c ****             break;
+ 232:Core/Src/window.c **** 
+ 233:Core/Src/window.c ****         default:
+ 234:Core/Src/window.c ****             break;
+ 235:Core/Src/window.c ****         }
+ 236:Core/Src/window.c **** 
+ 237:Core/Src/window.c ****         //default:
+ 238:Core/Src/window.c ****         // break;
+ 239:Core/Src/window.c ****     }
+ 240:Core/Src/window.c **** 
+ 241:Core/Src/window.c ****     if (te.tap >= TAP_ANY)
+ 591              		.loc 1 241 0
+ 592 0008 364B     		ldr	r3, .L71
+ 593 000a B3F90230 		ldrsh	r3, [r3, #2]
+ 594 000e 002B     		cmp	r3, #0
+ 595 0010 5ADB     		blt	.L70
+ 596              	.L51:
+ 597 0012 7047     		bx	lr
+ 598              	.L69:
+ 164:Core/Src/window.c ****     if (te.currentScreen == 9 && te.valueId == 1)
+ 599              		.loc 1 164 0 discriminator 1
+ 600 0014 334B     		ldr	r3, .L71
+ 601 0016 5B79     		ldrb	r3, [r3, #5]	@ zero_extendqisi2
+ 602 0018 012B     		cmp	r3, #1
+ 603 001a F5D1     		bne	.L52
+ 167:Core/Src/window.c ****         {
+ARM GAS  /tmp/ccviwRRs.s 			page 16
+
+
+ 604              		.loc 1 167 0
+ 605 001c 314B     		ldr	r3, .L71
+ 606 001e DB88     		ldrh	r3, [r3, #6]
+ 607 0020 A3F50043 		sub	r3, r3, #32768
+ 608 0024 013B     		subs	r3, r3, #1
+ 609 0026 072B     		cmp	r3, #7
+ 610 0028 EED8     		bhi	.L52
+ 611 002a 01A2     		adr	r2, .L54
+ 612 002c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 613              		.p2align 2
+ 614              	.L54:
+ 615 0030 51000000 		.word	.L53+1
+ 616 0034 AD000000 		.word	.L55+1
+ 617 0038 09000000 		.word	.L52+1
+ 618 003c 71000000 		.word	.L56+1
+ 619 0040 09000000 		.word	.L52+1
+ 620 0044 09000000 		.word	.L52+1
+ 621 0048 09000000 		.word	.L52+1
+ 622 004c 91000000 		.word	.L57+1
+ 623              		.p2align 1
+ 624              	.L53:
+ 170:Core/Src/window.c ****             {
+ 625              		.loc 1 170 0
+ 626 0050 244B     		ldr	r3, .L71
+ 627 0052 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 628 0054 812B     		cmp	r3, #129
+ 629 0056 06D0     		beq	.L58
+ 630 0058 822B     		cmp	r3, #130
+ 631 005a D5D1     		bne	.L52
+ 177:Core/Src/window.c ****                 window[rf].state = down;
+ 632              		.loc 1 177 0
+ 633 005c 224B     		ldr	r3, .L71+4
+ 634 005e 0222     		movs	r2, #2
+ 635 0060 1A70     		strb	r2, [r3]
+ 178:Core/Src/window.c ****             default:
+ 636              		.loc 1 178 0
+ 637 0062 1A75     		strb	r2, [r3, #20]
+ 638 0064 D0E7     		b	.L52
+ 639              	.L58:
+ 173:Core/Src/window.c ****                 window[rf].state = up;
+ 640              		.loc 1 173 0
+ 641 0066 204B     		ldr	r3, .L71+4
+ 642 0068 0122     		movs	r2, #1
+ 643 006a 1A70     		strb	r2, [r3]
+ 174:Core/Src/window.c ****                 break;
+ 644              		.loc 1 174 0
+ 645 006c 1A75     		strb	r2, [r3, #20]
+ 175:Core/Src/window.c ****             case SWIPE_DOWN:
+ 646              		.loc 1 175 0
+ 647 006e CBE7     		b	.L52
+ 648              	.L56:
+ 185:Core/Src/window.c ****             {
+ 649              		.loc 1 185 0
+ 650 0070 1C4B     		ldr	r3, .L71
+ 651 0072 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 652 0074 812B     		cmp	r3, #129
+ 653 0076 06D0     		beq	.L60
+ARM GAS  /tmp/ccviwRRs.s 			page 17
+
+
+ 654 0078 822B     		cmp	r3, #130
+ 655 007a C5D1     		bne	.L52
+ 194:Core/Src/window.c ****                 window[rr].state = down;
+ 656              		.loc 1 194 0
+ 657 007c 1A4B     		ldr	r3, .L71+4
+ 658 007e 0222     		movs	r2, #2
+ 659 0080 9A72     		strb	r2, [r3, #10]
+ 195:Core/Src/window.c **** 
+ 660              		.loc 1 195 0
+ 661 0082 9A77     		strb	r2, [r3, #30]
+ 197:Core/Src/window.c ****             default:
+ 662              		.loc 1 197 0
+ 663 0084 C0E7     		b	.L52
+ 664              	.L60:
+ 189:Core/Src/window.c ****                 window[rr].state = up;
+ 665              		.loc 1 189 0
+ 666 0086 184B     		ldr	r3, .L71+4
+ 667 0088 0122     		movs	r2, #1
+ 668 008a 9A72     		strb	r2, [r3, #10]
+ 190:Core/Src/window.c ****                 break;
+ 669              		.loc 1 190 0
+ 670 008c 9A77     		strb	r2, [r3, #30]
+ 191:Core/Src/window.c ****             case SWIPE_DOWN:
+ 671              		.loc 1 191 0
+ 672 008e BBE7     		b	.L52
+ 673              	.L57:
+ 204:Core/Src/window.c ****             {
+ 674              		.loc 1 204 0
+ 675 0090 144B     		ldr	r3, .L71
+ 676 0092 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 677 0094 812B     		cmp	r3, #129
+ 678 0096 05D0     		beq	.L62
+ 679 0098 822B     		cmp	r3, #130
+ 680 009a B5D1     		bne	.L52
+ 210:Core/Src/window.c ****                 break;
+ 681              		.loc 1 210 0
+ 682 009c 0222     		movs	r2, #2
+ 683 009e 124B     		ldr	r3, .L71+4
+ 684 00a0 1A70     		strb	r2, [r3]
+ 211:Core/Src/window.c **** 
+ 685              		.loc 1 211 0
+ 686 00a2 B1E7     		b	.L52
+ 687              	.L62:
+ 207:Core/Src/window.c ****                 break;
+ 688              		.loc 1 207 0
+ 689 00a4 0122     		movs	r2, #1
+ 690 00a6 104B     		ldr	r3, .L71+4
+ 691 00a8 1A70     		strb	r2, [r3]
+ 208:Core/Src/window.c ****             case SWIPE_DOWN:
+ 692              		.loc 1 208 0
+ 693 00aa ADE7     		b	.L52
+ 694              	.L55:
+ 219:Core/Src/window.c ****             {
+ 695              		.loc 1 219 0
+ 696 00ac 0D4B     		ldr	r3, .L71
+ 697 00ae 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 698 00b0 812B     		cmp	r3, #129
+ARM GAS  /tmp/ccviwRRs.s 			page 18
+
+
+ 699 00b2 05D0     		beq	.L64
+ 700 00b4 822B     		cmp	r3, #130
+ 701 00b6 A7D1     		bne	.L52
+ 225:Core/Src/window.c ****                 break;
+ 702              		.loc 1 225 0
+ 703 00b8 0222     		movs	r2, #2
+ 704 00ba 0B4B     		ldr	r3, .L71+4
+ 705 00bc 1A75     		strb	r2, [r3, #20]
+ 226:Core/Src/window.c **** 
+ 706              		.loc 1 226 0
+ 707 00be A3E7     		b	.L52
+ 708              	.L64:
+ 222:Core/Src/window.c ****                 break;
+ 709              		.loc 1 222 0
+ 710 00c0 0122     		movs	r2, #1
+ 711 00c2 094B     		ldr	r3, .L71+4
+ 712 00c4 1A75     		strb	r2, [r3, #20]
+ 223:Core/Src/window.c ****             case SWIPE_DOWN:
+ 713              		.loc 1 223 0
+ 714 00c6 9FE7     		b	.L52
+ 715              	.L70:
+ 242:Core/Src/window.c ****     {
+ 243:Core/Src/window.c ****         stageState = ready;
+ 716              		.loc 1 243 0
+ 717 00c8 0023     		movs	r3, #0
+ 718 00ca 084A     		ldr	r2, .L71+8
+ 719 00cc 1370     		strb	r3, [r2]
+ 720              	.LVL77:
+ 721              	.LBB9:
+ 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 722              		.loc 1 244 0
+ 723 00ce 06E0     		b	.L67
+ 724              	.LVL78:
+ 725              	.L68:
+ 245:Core/Src/window.c ****         {
+ 246:Core/Src/window.c ****             window[i].state = idle;
+ 726              		.loc 1 246 0 discriminator 3
+ 727 00d0 03EB8301 		add	r1, r3, r3, lsl #2
+ 728 00d4 4A00     		lsls	r2, r1, #1
+ 729 00d6 0020     		movs	r0, #0
+ 730 00d8 0349     		ldr	r1, .L71+4
+ 731 00da 8854     		strb	r0, [r1, r2]
+ 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 732              		.loc 1 244 0 discriminator 3
+ 733 00dc 0133     		adds	r3, r3, #1
+ 734              	.LVL79:
+ 735              	.L67:
+ 244:Core/Src/window.c ****         for (size_t i = 0; i < 4; i++)
+ 736              		.loc 1 244 0 is_stmt 0 discriminator 1
+ 737 00de 032B     		cmp	r3, #3
+ 738 00e0 F6D9     		bls	.L68
+ 739 00e2 96E7     		b	.L51
+ 740              	.L72:
+ 741              		.align	2
+ 742              	.L71:
+ 743 00e4 00000000 		.word	te
+ 744 00e8 00000000 		.word	window
+ARM GAS  /tmp/ccviwRRs.s 			page 19
+
+
+ 745 00ec 00000000 		.word	stageState
+ 746              	.LBE9:
+ 747              		.cfi_endproc
+ 748              	.LFE70:
+ 750              		.section	.text.staging,"ax",%progbits
+ 751              		.align	1
+ 752              		.global	staging
+ 753              		.syntax unified
+ 754              		.thumb
+ 755              		.thumb_func
+ 756              		.fpu softvfp
+ 758              	staging:
+ 759              	.LFB71:
+ 247:Core/Src/window.c ****         }
+ 248:Core/Src/window.c ****         
+ 249:Core/Src/window.c ****     }
+ 250:Core/Src/window.c **** }
+ 251:Core/Src/window.c **** 
+ 252:Core/Src/window.c **** 
+ 253:Core/Src/window.c **** 
+ 254:Core/Src/window.c **** 
+ 255:Core/Src/window.c **** 
+ 256:Core/Src/window.c **** void staging(void)
+ 257:Core/Src/window.c **** {
+ 760              		.loc 1 257 0 is_stmt 1
+ 761              		.cfi_startproc
+ 762              		@ args = 0, pretend = 0, frame = 0
+ 763              		@ frame_needed = 0, uses_anonymous_args = 0
+ 764              		@ link register save eliminated.
+ 258:Core/Src/window.c ****     switch (stageState)
+ 765              		.loc 1 258 0
+ 766 0000 0A4B     		ldr	r3, .L77
+ 767 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 768 0004 012B     		cmp	r3, #1
+ 769 0006 09D0     		beq	.L75
+ 770 0008 022B     		cmp	r3, #2
+ 771 000a 0ED1     		bne	.L73
+ 259:Core/Src/window.c ****     {
+ 260:Core/Src/window.c **** 
+ 261:Core/Src/window.c ****     case ready:
+ 262:Core/Src/window.c **** 
+ 263:Core/Src/window.c ****         break;
+ 264:Core/Src/window.c **** 
+ 265:Core/Src/window.c ****     case all_up:
+ 266:Core/Src/window.c ****         stageNextState = rears;
+ 772              		.loc 1 266 0
+ 773 000c 0422     		movs	r2, #4
+ 774 000e 084B     		ldr	r3, .L77+4
+ 775 0010 1A70     		strb	r2, [r3]
+ 267:Core/Src/window.c ****         switch (stageNextState)
+ 268:Core/Src/window.c ****         {
+ 269:Core/Src/window.c ****         case rears:
+ 270:Core/Src/window.c ****             window[lr].state = up;
+ 776              		.loc 1 270 0
+ 777 0012 084B     		ldr	r3, .L77+8
+ 778 0014 0122     		movs	r2, #1
+ 779 0016 9A72     		strb	r2, [r3, #10]
+ARM GAS  /tmp/ccviwRRs.s 			page 20
+
+
+ 271:Core/Src/window.c ****             window[rr].state = up;
+ 780              		.loc 1 271 0
+ 781 0018 9A77     		strb	r2, [r3, #30]
+ 782 001a 7047     		bx	lr
+ 783              	.L75:
+ 272:Core/Src/window.c **** 
+ 273:Core/Src/window.c ****             if (window[lr].state == idle && window[rr].state == idle)
+ 274:Core/Src/window.c ****             {
+ 275:Core/Src/window.c ****                 stageNextState = fronts;
+ 276:Core/Src/window.c ****             }
+ 277:Core/Src/window.c **** 
+ 278:Core/Src/window.c ****             break;
+ 279:Core/Src/window.c ****         case fronts:
+ 280:Core/Src/window.c ****             window[lf].state = up;
+ 281:Core/Src/window.c ****             window[rf].state = up;
+ 282:Core/Src/window.c **** 
+ 283:Core/Src/window.c ****             if (window[lf].state == idle && window[rf].state == idle)
+ 284:Core/Src/window.c ****             {
+ 285:Core/Src/window.c ****                 stageState = ready;
+ 286:Core/Src/window.c ****             }
+ 287:Core/Src/window.c **** 
+ 288:Core/Src/window.c ****             break;
+ 289:Core/Src/window.c **** 
+ 290:Core/Src/window.c ****         default:
+ 291:Core/Src/window.c ****             break;
+ 292:Core/Src/window.c ****         }
+ 293:Core/Src/window.c **** 
+ 294:Core/Src/window.c ****         break;
+ 295:Core/Src/window.c ****     case all_down:
+ 296:Core/Src/window.c ****         stageNextState = fronts;
+ 784              		.loc 1 296 0
+ 785 001c 0322     		movs	r2, #3
+ 786 001e 044B     		ldr	r3, .L77+4
+ 787 0020 1A70     		strb	r2, [r3]
+ 297:Core/Src/window.c ****         switch (stageNextState)
+ 298:Core/Src/window.c ****         {
+ 299:Core/Src/window.c ****         case fronts:
+ 300:Core/Src/window.c ****             window[lf].state = down;
+ 788              		.loc 1 300 0
+ 789 0022 044B     		ldr	r3, .L77+8
+ 790 0024 0222     		movs	r2, #2
+ 791 0026 1A70     		strb	r2, [r3]
+ 301:Core/Src/window.c ****             window[rf].state = down;
+ 792              		.loc 1 301 0
+ 793 0028 1A75     		strb	r2, [r3, #20]
+ 794              	.L73:
+ 795 002a 7047     		bx	lr
+ 796              	.L78:
+ 797              		.align	2
+ 798              	.L77:
+ 799 002c 00000000 		.word	stageState
+ 800 0030 00000000 		.word	stageNextState
+ 801 0034 00000000 		.word	window
+ 802              		.cfi_endproc
+ 803              	.LFE71:
+ 805              		.section	.text.windowHandler,"ax",%progbits
+ 806              		.align	1
+ARM GAS  /tmp/ccviwRRs.s 			page 21
+
+
+ 807              		.global	windowHandler
+ 808              		.syntax unified
+ 809              		.thumb
+ 810              		.thumb_func
+ 811              		.fpu softvfp
+ 813              	windowHandler:
+ 814              	.LFB67:
+  24:Core/Src/window.c ****     eventHandler();
+ 815              		.loc 1 24 0
+ 816              		.cfi_startproc
+ 817              		@ args = 0, pretend = 0, frame = 0
+ 818              		@ frame_needed = 0, uses_anonymous_args = 0
+ 819 0000 10B5     		push	{r4, lr}
+ 820              	.LCFI3:
+ 821              		.cfi_def_cfa_offset 8
+ 822              		.cfi_offset 4, -8
+ 823              		.cfi_offset 14, -4
+  25:Core/Src/window.c ****     stateHandler();
+ 824              		.loc 1 25 0
+ 825 0002 FFF7FEFF 		bl	eventHandler
+ 826              	.LVL80:
+  26:Core/Src/window.c ****     for (size_t i = 0; i < MAX_WINDOWS; i++)
+ 827              		.loc 1 26 0
+ 828 0006 FFF7FEFF 		bl	stateHandler
+ 829              	.LVL81:
+ 830              	.LBB10:
+  27:Core/Src/window.c ****     {
+ 831              		.loc 1 27 0
+ 832 000a 0024     		movs	r4, #0
+ 833 000c 08E0     		b	.L80
+ 834              	.LVL82:
+ 835              	.L81:
+  29:Core/Src/window.c ****     }
+ 836              		.loc 1 29 0 discriminator 3
+ 837 000e 04EB8402 		add	r2, r4, r4, lsl #2
+ 838 0012 5300     		lsls	r3, r2, #1
+ 839 0014 2146     		mov	r1, r4
+ 840 0016 0548     		ldr	r0, .L83
+ 841 0018 1844     		add	r0, r0, r3
+ 842 001a FFF7FEFF 		bl	motorHandler
+ 843              	.LVL83:
+  27:Core/Src/window.c ****     {
+ 844              		.loc 1 27 0 discriminator 3
+ 845 001e 0134     		adds	r4, r4, #1
+ 846              	.LVL84:
+ 847              	.L80:
+  27:Core/Src/window.c ****     {
+ 848              		.loc 1 27 0 is_stmt 0 discriminator 1
+ 849 0020 032C     		cmp	r4, #3
+ 850 0022 F4D9     		bls	.L81
+ 851              	.LBE10:
+  31:Core/Src/window.c **** }
+ 852              		.loc 1 31 0 is_stmt 1
+ 853 0024 FFF7FEFF 		bl	staging
+ 854              	.LVL85:
+ 855 0028 10BD     		pop	{r4, pc}
+ 856              	.LVL86:
+ARM GAS  /tmp/ccviwRRs.s 			page 22
+
+
+ 857              	.L84:
+ 858 002a 00BF     		.align	2
+ 859              	.L83:
+ 860 002c 00000000 		.word	window
+ 861              		.cfi_endproc
+ 862              	.LFE67:
+ 864              		.comm	window,40,4
+ 865              		.comm	stageNextState,1,1
+ 866              		.comm	stageState,1,1
+ 867              		.comm	motorCurrent,32,4
+ 868              		.comm	te,10,4
+ 869              		.comm	canDebug,4,4
+ 870              		.comm	txCycle,4,4
+ 871              		.comm	busCount,4,4
+ 872              		.comm	canTx,8,4
+ 873              		.comm	canMailbox,4,4
+ 874              		.comm	canRx,8,4
+ 875              		.comm	txMsgExt,24,4
+ 876              		.comm	txMsg,24,4
+ 877              		.comm	rxMsg,28,4
+ 878              		.comm	event,40,4
+ 879              		.comm	data,40,4
+ 880              		.comm	hcan,40,4
+ 881              		.text
+ 882              	.Letext0:
+ 883              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 884              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 885              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 886              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 887              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 888              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 889              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 890              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 891              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 892              		.file 11 "/usr/include/newlib/sys/lock.h"
+ 893              		.file 12 "/usr/include/newlib/sys/_types.h"
+ 894              		.file 13 "/usr/include/newlib/sys/reent.h"
+ 895              		.file 14 "Core/Inc/can_setup.h"
+ 896              		.file 15 "Core/Inc/encoder.h"
+ 897              		.file 16 "Core/Inc/window.h"
+ 898              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ARM GAS  /tmp/ccviwRRs.s 			page 23
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 window.c
+     /tmp/ccviwRRs.s:16     .text.windowInit:0000000000000000 $t
+     /tmp/ccviwRRs.s:23     .text.windowInit:0000000000000000 windowInit
+     /tmp/ccviwRRs.s:133    .text.windowInit:0000000000000064 $d
+                            *COM*:0000000000000028 window
+                            *COM*:0000000000000020 motorCurrent
+                            *COM*:0000000000000001 stageState
+                            *COM*:0000000000000001 stageNextState
+     /tmp/ccviwRRs.s:141    .text.stateHandler:0000000000000000 $t
+     /tmp/ccviwRRs.s:148    .text.stateHandler:0000000000000000 stateHandler
+     /tmp/ccviwRRs.s:266    .text.stateHandler:0000000000000098 $d
+     /tmp/ccviwRRs.s:272    .text.motorHandler:0000000000000000 $t
+     /tmp/ccviwRRs.s:279    .text.motorHandler:0000000000000000 motorHandler
+     /tmp/ccviwRRs.s:299    .text.motorHandler:000000000000000e $d
+     /tmp/ccviwRRs.s:303    .text.motorHandler:0000000000000012 $t
+     /tmp/ccviwRRs.s:566    .text.motorHandler:0000000000000180 $d
+     /tmp/ccviwRRs.s:571    .text.eventHandler:0000000000000000 $t
+     /tmp/ccviwRRs.s:578    .text.eventHandler:0000000000000000 eventHandler
+     /tmp/ccviwRRs.s:615    .text.eventHandler:0000000000000030 $d
+     /tmp/ccviwRRs.s:623    .text.eventHandler:0000000000000050 $t
+     /tmp/ccviwRRs.s:743    .text.eventHandler:00000000000000e4 $d
+                            *COM*:000000000000000a te
+     /tmp/ccviwRRs.s:751    .text.staging:0000000000000000 $t
+     /tmp/ccviwRRs.s:758    .text.staging:0000000000000000 staging
+     /tmp/ccviwRRs.s:799    .text.staging:000000000000002c $d
+     /tmp/ccviwRRs.s:806    .text.windowHandler:0000000000000000 $t
+     /tmp/ccviwRRs.s:813    .text.windowHandler:0000000000000000 windowHandler
+     /tmp/ccviwRRs.s:860    .text.windowHandler:000000000000002c $d
+                            *COM*:0000000000000004 canDebug
+                            *COM*:0000000000000004 txCycle
+                            *COM*:0000000000000004 busCount
+                            *COM*:0000000000000008 canTx
+                            *COM*:0000000000000004 canMailbox
+                            *COM*:0000000000000008 canRx
+                            *COM*:0000000000000018 txMsgExt
+                            *COM*:0000000000000018 txMsg
+                            *COM*:000000000000001c rxMsg
+                            *COM*:0000000000000028 event
+                            *COM*:0000000000000028 data
+                            *COM*:0000000000000028 hcan
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin

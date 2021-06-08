@@ -1,0 +1,384 @@
+ARM GAS  /tmp/ccut8x0u.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"encoder.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.setWidget,"ax",%progbits
+  16              		.align	1
+  17              		.global	setWidget
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	setWidget:
+  24              	.LFB66:
+  25              		.file 1 "Core/Src/encoder.c"
+   1:Core/Src/encoder.c **** #include "encoder.h"
+   2:Core/Src/encoder.c **** 
+   3:Core/Src/encoder.c **** void setWidget(uint8_t screenNum, uint8_t valueId, uint16_t currentVal)
+   4:Core/Src/encoder.c **** {
+  26              		.loc 1 4 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              	.LVL0:
+  31 0000 10B5     		push	{r4, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+   5:Core/Src/encoder.c **** 
+   6:Core/Src/encoder.c ****     txMsg.ExtId = CONTROL;
+  36              		.loc 1 6 0
+  37 0002 0B4B     		ldr	r3, .L3
+  38 0004 0B4C     		ldr	r4, .L3+4
+  39 0006 5C60     		str	r4, [r3, #4]
+   7:Core/Src/encoder.c ****     txMsg.DLC = 7;
+  40              		.loc 1 7 0
+  41 0008 0724     		movs	r4, #7
+  42 000a 1C61     		str	r4, [r3, #16]
+   8:Core/Src/encoder.c ****     canTx[0] = 0x11; //Force Widget Data
+  43              		.loc 1 8 0
+  44 000c 0A4B     		ldr	r3, .L3+8
+  45 000e 1124     		movs	r4, #17
+  46 0010 1C70     		strb	r4, [r3]
+   9:Core/Src/encoder.c ****     canTx[1] = screenNum;
+  47              		.loc 1 9 0
+  48 0012 5870     		strb	r0, [r3, #1]
+  10:Core/Src/encoder.c ****     canTx[2] = valueId;
+ARM GAS  /tmp/ccut8x0u.s 			page 2
+
+
+  49              		.loc 1 10 0
+  50 0014 9970     		strb	r1, [r3, #2]
+  11:Core/Src/encoder.c ****     canTx[3] = currentVal & 0xFF;
+  51              		.loc 1 11 0
+  52 0016 DA70     		strb	r2, [r3, #3]
+  12:Core/Src/encoder.c ****     canTx[4] = currentVal >> 8;
+  53              		.loc 1 12 0
+  54 0018 120A     		lsrs	r2, r2, #8
+  55              	.LVL1:
+  56 001a 1A71     		strb	r2, [r3, #4]
+  13:Core/Src/encoder.c ****     canTx[5] = 0x00; //Display Code placeholder
+  57              		.loc 1 13 0
+  58 001c 0022     		movs	r2, #0
+  59 001e 5A71     		strb	r2, [r3, #5]
+  14:Core/Src/encoder.c ****     canTx[6] = 0x00; // Value Active ID  0x00-not used, 0x01 Value 1 currently active
+  60              		.loc 1 14 0
+  61 0020 9A71     		strb	r2, [r3, #6]
+  15:Core/Src/encoder.c ****     te.currentScreen = screenNum;
+  62              		.loc 1 15 0
+  63 0022 064A     		ldr	r2, .L3+12
+  64 0024 1070     		strb	r0, [r2]
+  16:Core/Src/encoder.c ****     txExt(&txMsgExt, canTx);
+  65              		.loc 1 16 0
+  66 0026 1946     		mov	r1, r3
+  67              	.LVL2:
+  68 0028 0548     		ldr	r0, .L3+16
+  69              	.LVL3:
+  70 002a FFF7FEFF 		bl	txExt
+  71              	.LVL4:
+  72 002e 10BD     		pop	{r4, pc}
+  73              	.L4:
+  74              		.align	2
+  75              	.L3:
+  76 0030 00000000 		.word	txMsg
+  77 0034 21F2EF18 		.word	418378273
+  78 0038 00000000 		.word	canTx
+  79 003c 00000000 		.word	te
+  80 0040 00000000 		.word	txMsgExt
+  81              		.cfi_endproc
+  82              	.LFE66:
+  84              		.section	.text.setBacklight,"ax",%progbits
+  85              		.align	1
+  86              		.global	setBacklight
+  87              		.syntax unified
+  88              		.thumb
+  89              		.thumb_func
+  90              		.fpu softvfp
+  92              	setBacklight:
+  93              	.LFB67:
+  17:Core/Src/encoder.c **** }
+  18:Core/Src/encoder.c **** 
+  19:Core/Src/encoder.c **** void setBacklight(uint8_t level)
+  20:Core/Src/encoder.c **** {
+  94              		.loc 1 20 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccut8x0u.s 			page 3
+
+
+  98              	.LVL5:
+  99 0000 08B5     		push	{r3, lr}
+ 100              	.LCFI1:
+ 101              		.cfi_def_cfa_offset 8
+ 102              		.cfi_offset 3, -8
+ 103              		.cfi_offset 14, -4
+  21:Core/Src/encoder.c ****     txMsg.ExtId = CONTROL;
+ 104              		.loc 1 21 0
+ 105 0002 0A4B     		ldr	r3, .L7
+ 106 0004 0A4A     		ldr	r2, .L7+4
+ 107 0006 5A60     		str	r2, [r3, #4]
+  22:Core/Src/encoder.c ****     txMsg.DLC = 1;
+ 108              		.loc 1 22 0
+ 109 0008 0122     		movs	r2, #1
+ 110 000a 1A61     		str	r2, [r3, #16]
+  23:Core/Src/encoder.c ****     canTx[0] = 0x80; //Screen brightness
+ 111              		.loc 1 23 0
+ 112 000c 0949     		ldr	r1, .L7+8
+ 113 000e 8023     		movs	r3, #128
+ 114 0010 0B70     		strb	r3, [r1]
+  24:Core/Src/encoder.c ****     canTx[1] = 0xFF;
+ 115              		.loc 1 24 0
+ 116 0012 FF23     		movs	r3, #255
+ 117 0014 4B70     		strb	r3, [r1, #1]
+  25:Core/Src/encoder.c ****     canTx[2] = level; // value 0-100
+ 118              		.loc 1 25 0
+ 119 0016 8870     		strb	r0, [r1, #2]
+  26:Core/Src/encoder.c ****     canTx[3] = 0xFF;
+ 120              		.loc 1 26 0
+ 121 0018 CB70     		strb	r3, [r1, #3]
+  27:Core/Src/encoder.c ****     canTx[4] = 0xFF;
+ 122              		.loc 1 27 0
+ 123 001a 0B71     		strb	r3, [r1, #4]
+  28:Core/Src/encoder.c ****     canTx[5] = 0xFF;
+ 124              		.loc 1 28 0
+ 125 001c 4B71     		strb	r3, [r1, #5]
+  29:Core/Src/encoder.c ****     canTx[6] = 0xFF;
+ 126              		.loc 1 29 0
+ 127 001e 8B71     		strb	r3, [r1, #6]
+  30:Core/Src/encoder.c ****     canTx[7] = 0xFF;
+ 128              		.loc 1 30 0
+ 129 0020 CB71     		strb	r3, [r1, #7]
+  31:Core/Src/encoder.c ****     txExt(&txMsgExt, canTx);
+ 130              		.loc 1 31 0
+ 131 0022 0548     		ldr	r0, .L7+12
+ 132              	.LVL6:
+ 133 0024 FFF7FEFF 		bl	txExt
+ 134              	.LVL7:
+ 135 0028 08BD     		pop	{r3, pc}
+ 136              	.L8:
+ 137 002a 00BF     		.align	2
+ 138              	.L7:
+ 139 002c 00000000 		.word	txMsg
+ 140 0030 21F2EF18 		.word	418378273
+ 141 0034 00000000 		.word	canTx
+ 142 0038 00000000 		.word	txMsgExt
+ 143              		.cfi_endproc
+ARM GAS  /tmp/ccut8x0u.s 			page 4
+
+
+ 144              	.LFE67:
+ 146              		.section	.text.getEvent,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	getEvent
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.fpu softvfp
+ 154              	getEvent:
+ 155              	.LFB68:
+  32:Core/Src/encoder.c **** }
+  33:Core/Src/encoder.c **** 
+  34:Core/Src/encoder.c **** void getEvent(CAN_RxHeaderTypeDef *rxMsg, uint8_t *canRx)
+  35:Core/Src/encoder.c **** {
+ 156              		.loc 1 35 0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161              	.LVL8:
+  36:Core/Src/encoder.c **** 
+  37:Core/Src/encoder.c ****     if (rxMsg->ExtId == EVENT)
+ 162              		.loc 1 37 0
+ 163 0000 4268     		ldr	r2, [r0, #4]
+ 164 0002 084B     		ldr	r3, .L12
+ 165 0004 9A42     		cmp	r2, r3
+ 166 0006 00D0     		beq	.L11
+ 167              	.LVL9:
+ 168              	.L9:
+ 169 0008 7047     		bx	lr
+ 170              	.LVL10:
+ 171              	.L11:
+  38:Core/Src/encoder.c ****     {
+  39:Core/Src/encoder.c ****         te.currentScreen = canRx[0];
+ 172              		.loc 1 39 0
+ 173 000a 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+ 174 000c 064B     		ldr	r3, .L12+4
+ 175 000e 1A70     		strb	r2, [r3]
+  40:Core/Src/encoder.c ****         // canRx[1] Reserved
+  41:Core/Src/encoder.c ****         // canRx[2] 0x01 Events
+  42:Core/Src/encoder.c ****         te.knob = canRx[3];
+ 176              		.loc 1 42 0
+ 177 0010 CA78     		ldrb	r2, [r1, #3]	@ zero_extendqisi2
+ 178 0012 5A70     		strb	r2, [r3, #1]
+  43:Core/Src/encoder.c ****         te.tap = (canRx[4]) + (canRx[5] << 8);
+ 179              		.loc 1 43 0
+ 180 0014 0A79     		ldrb	r2, [r1, #4]	@ zero_extendqisi2
+ 181 0016 4879     		ldrb	r0, [r1, #5]	@ zero_extendqisi2
+ 182              	.LVL11:
+ 183 0018 02EB0022 		add	r2, r2, r0, lsl #8
+ 184 001c 5A80     		strh	r2, [r3, #2]	@ movhi
+  44:Core/Src/encoder.c ****         te.swipe = canRx[6];
+ 185              		.loc 1 44 0
+ 186 001e 8A79     		ldrb	r2, [r1, #6]	@ zero_extendqisi2
+ 187 0020 1A71     		strb	r2, [r3, #4]
+  45:Core/Src/encoder.c ****     }
+  46:Core/Src/encoder.c **** }
+ARM GAS  /tmp/ccut8x0u.s 			page 5
+
+
+ 188              		.loc 1 46 0
+ 189 0022 F1E7     		b	.L9
+ 190              	.L13:
+ 191              		.align	2
+ 192              	.L12:
+ 193 0024 F20FFF18 		.word	419368946
+ 194 0028 00000000 		.word	te
+ 195              		.cfi_endproc
+ 196              	.LFE68:
+ 198              		.section	.text.getData,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	getData
+ 201              		.syntax unified
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.fpu softvfp
+ 206              	getData:
+ 207              	.LFB69:
+  47:Core/Src/encoder.c **** 
+  48:Core/Src/encoder.c **** void getData(CAN_RxHeaderTypeDef *rxMsg, uint8_t *canRx)
+  49:Core/Src/encoder.c **** {
+ 208              		.loc 1 49 0
+ 209              		.cfi_startproc
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212              		@ link register save eliminated.
+ 213              	.LVL12:
+  50:Core/Src/encoder.c ****     if (rxMsg->ExtId == DATA)
+ 214              		.loc 1 50 0
+ 215 0000 4268     		ldr	r2, [r0, #4]
+ 216 0002 094B     		ldr	r3, .L17
+ 217 0004 9A42     		cmp	r2, r3
+ 218 0006 00D0     		beq	.L16
+ 219              	.LVL13:
+ 220              	.L14:
+ 221 0008 7047     		bx	lr
+ 222              	.LVL14:
+ 223              	.L16:
+  51:Core/Src/encoder.c ****     {
+  52:Core/Src/encoder.c ****         te.currentScreen = canRx[0];
+ 224              		.loc 1 52 0
+ 225 000a 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+ 226 000c 074B     		ldr	r3, .L17+4
+ 227 000e 1A70     		strb	r2, [r3]
+  53:Core/Src/encoder.c ****         // canRx[1] Reserved
+  54:Core/Src/encoder.c ****         te.valueId = canRx[2];
+ 228              		.loc 1 54 0
+ 229 0010 8A78     		ldrb	r2, [r1, #2]	@ zero_extendqisi2
+ 230 0012 5A71     		strb	r2, [r3, #5]
+  55:Core/Src/encoder.c ****         te.currentVal = canRx[3] + (canRx[4] << 8);
+ 231              		.loc 1 55 0
+ 232 0014 CA78     		ldrb	r2, [r1, #3]	@ zero_extendqisi2
+ 233 0016 0879     		ldrb	r0, [r1, #4]	@ zero_extendqisi2
+ 234              	.LVL15:
+ 235 0018 02EB0022 		add	r2, r2, r0, lsl #8
+ 236 001c DA80     		strh	r2, [r3, #6]	@ movhi
+  56:Core/Src/encoder.c ****         te.dispCode = canRx[5];
+ARM GAS  /tmp/ccut8x0u.s 			page 6
+
+
+ 237              		.loc 1 56 0
+ 238 001e 4A79     		ldrb	r2, [r1, #5]	@ zero_extendqisi2
+ 239 0020 1A72     		strb	r2, [r3, #8]
+  57:Core/Src/encoder.c ****         te.activeId = canRx[6];
+ 240              		.loc 1 57 0
+ 241 0022 8A79     		ldrb	r2, [r1, #6]	@ zero_extendqisi2
+ 242 0024 5A72     		strb	r2, [r3, #9]
+  58:Core/Src/encoder.c ****     }
+  59:Core/Src/encoder.c **** }...
+ 243              		.loc 1 59 0
+ 244 0026 EFE7     		b	.L14
+ 245              	.L18:
+ 246              		.align	2
+ 247              	.L17:
+ 248 0028 F211FF18 		.word	419369458
+ 249 002c 00000000 		.word	te
+ 250              		.cfi_endproc
+ 251              	.LFE69:
+ 253              		.comm	te,10,4
+ 254              		.comm	canDebug,4,4
+ 255              		.comm	txCycle,4,4
+ 256              		.comm	busCount,4,4
+ 257              		.comm	canTx,8,4
+ 258              		.comm	canMailbox,4,4
+ 259              		.comm	canRx,8,4
+ 260              		.comm	txMsgExt,24,4
+ 261              		.comm	txMsg,24,4
+ 262              		.comm	rxMsg,28,4
+ 263              		.comm	event,40,4
+ 264              		.comm	data,40,4
+ 265              		.comm	hcan,40,4
+ 266              		.text
+ 267              	.Letext0:
+ 268              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 269              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 270              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 271              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 272              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 273              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 274              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 275              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 276              		.file 10 "/usr/include/newlib/sys/lock.h"
+ 277              		.file 11 "/usr/include/newlib/sys/_types.h"
+ 278              		.file 12 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 279              		.file 13 "/usr/include/newlib/sys/reent.h"
+ 280              		.file 14 "Core/Inc/can_setup.h"
+ 281              		.file 15 "Core/Inc/encoder.h"
+ARM GAS  /tmp/ccut8x0u.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 encoder.c
+     /tmp/ccut8x0u.s:16     .text.setWidget:0000000000000000 $t
+     /tmp/ccut8x0u.s:23     .text.setWidget:0000000000000000 setWidget
+     /tmp/ccut8x0u.s:76     .text.setWidget:0000000000000030 $d
+                            *COM*:0000000000000018 txMsg
+                            *COM*:0000000000000008 canTx
+                            *COM*:000000000000000a te
+                            *COM*:0000000000000018 txMsgExt
+     /tmp/ccut8x0u.s:85     .text.setBacklight:0000000000000000 $t
+     /tmp/ccut8x0u.s:92     .text.setBacklight:0000000000000000 setBacklight
+     /tmp/ccut8x0u.s:139    .text.setBacklight:000000000000002c $d
+     /tmp/ccut8x0u.s:147    .text.getEvent:0000000000000000 $t
+     /tmp/ccut8x0u.s:154    .text.getEvent:0000000000000000 getEvent
+     /tmp/ccut8x0u.s:193    .text.getEvent:0000000000000024 $d
+     /tmp/ccut8x0u.s:199    .text.getData:0000000000000000 $t
+     /tmp/ccut8x0u.s:206    .text.getData:0000000000000000 getData
+     /tmp/ccut8x0u.s:248    .text.getData:0000000000000028 $d
+                            *COM*:0000000000000004 canDebug
+                            *COM*:0000000000000004 txCycle
+                            *COM*:0000000000000004 busCount
+                            *COM*:0000000000000004 canMailbox
+                            *COM*:0000000000000008 canRx
+                            *COM*:000000000000001c rxMsg
+                            *COM*:0000000000000028 event
+                            *COM*:0000000000000028 data
+                            *COM*:0000000000000028 hcan
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+txExt
