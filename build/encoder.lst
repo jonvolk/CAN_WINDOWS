@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccdWyVRv.s 			page 1
+ARM GAS  /tmp/ccayp4jo.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
   47              		.loc 1 9 0
   48 0012 5870     		strb	r0, [r3, #1]
   10:Core/Src/encoder.c ****     canTx[2] = valueId;
-ARM GAS  /tmp/ccdWyVRv.s 			page 2
+ARM GAS  /tmp/ccayp4jo.s 			page 2
 
 
   49              		.loc 1 10 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
   95              		.cfi_startproc
   96              		@ args = 0, pretend = 0, frame = 0
   97              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccdWyVRv.s 			page 3
+ARM GAS  /tmp/ccayp4jo.s 			page 3
 
 
   98              	.LVL5:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
  141 0034 00000000 		.word	canTx
  142 0038 00000000 		.word	txMsgExt
  143              		.cfi_endproc
-ARM GAS  /tmp/ccdWyVRv.s 			page 4
+ARM GAS  /tmp/ccayp4jo.s 			page 4
 
 
  144              	.LFE67:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
  187 0020 1A71     		strb	r2, [r3, #4]
   45:Core/Src/encoder.c ****     }
   46:Core/Src/encoder.c **** }
-ARM GAS  /tmp/ccdWyVRv.s 			page 5
+ARM GAS  /tmp/ccayp4jo.s 			page 5
 
 
  188              		.loc 1 46 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
  235 0018 02EB0022 		add	r2, r2, r0, lsl #8
  236 001c DA80     		strh	r2, [r3, #6]	@ movhi
   56:Core/Src/encoder.c ****         te.dispCode = canRx[5];
-ARM GAS  /tmp/ccdWyVRv.s 			page 6
+ARM GAS  /tmp/ccayp4jo.s 			page 6
 
 
  237              		.loc 1 56 0
@@ -346,27 +346,27 @@ ARM GAS  /tmp/ccdWyVRv.s 			page 1
  277              		.file 13 "/usr/include/newlib/sys/reent.h"
  278              		.file 14 "Core/Inc/can_setup.h"
  279              		.file 15 "Core/Inc/encoder.h"
-ARM GAS  /tmp/ccdWyVRv.s 			page 7
+ARM GAS  /tmp/ccayp4jo.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 encoder.c
-     /tmp/ccdWyVRv.s:16     .text.setWidget:0000000000000000 $t
-     /tmp/ccdWyVRv.s:23     .text.setWidget:0000000000000000 setWidget
-     /tmp/ccdWyVRv.s:76     .text.setWidget:0000000000000030 $d
+     /tmp/ccayp4jo.s:16     .text.setWidget:0000000000000000 $t
+     /tmp/ccayp4jo.s:23     .text.setWidget:0000000000000000 setWidget
+     /tmp/ccayp4jo.s:76     .text.setWidget:0000000000000030 $d
                             *COM*:0000000000000018 txMsg
                             *COM*:0000000000000008 canTx
                             *COM*:000000000000000a te
                             *COM*:0000000000000018 txMsgExt
-     /tmp/ccdWyVRv.s:85     .text.setBacklight:0000000000000000 $t
-     /tmp/ccdWyVRv.s:92     .text.setBacklight:0000000000000000 setBacklight
-     /tmp/ccdWyVRv.s:139    .text.setBacklight:000000000000002c $d
-     /tmp/ccdWyVRv.s:147    .text.getEvent:0000000000000000 $t
-     /tmp/ccdWyVRv.s:154    .text.getEvent:0000000000000000 getEvent
-     /tmp/ccdWyVRv.s:193    .text.getEvent:0000000000000024 $d
-     /tmp/ccdWyVRv.s:199    .text.getData:0000000000000000 $t
-     /tmp/ccdWyVRv.s:206    .text.getData:0000000000000000 getData
-     /tmp/ccdWyVRv.s:248    .text.getData:0000000000000028 $d
+     /tmp/ccayp4jo.s:85     .text.setBacklight:0000000000000000 $t
+     /tmp/ccayp4jo.s:92     .text.setBacklight:0000000000000000 setBacklight
+     /tmp/ccayp4jo.s:139    .text.setBacklight:000000000000002c $d
+     /tmp/ccayp4jo.s:147    .text.getEvent:0000000000000000 $t
+     /tmp/ccayp4jo.s:154    .text.getEvent:0000000000000000 getEvent
+     /tmp/ccayp4jo.s:193    .text.getEvent:0000000000000024 $d
+     /tmp/ccayp4jo.s:199    .text.getData:0000000000000000 $t
+     /tmp/ccayp4jo.s:206    .text.getData:0000000000000000 getData
+     /tmp/ccayp4jo.s:248    .text.getData:0000000000000028 $d
                             *COM*:0000000000000004 txCycle
                             *COM*:0000000000000004 canMailbox
                             *COM*:0000000000000008 canRx

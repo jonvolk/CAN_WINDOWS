@@ -64,18 +64,18 @@ void Error_Handler(void);
 #define LR_U_FB_GPIO_Port GPIOA
 #define LR_D_FB_Pin GPIO_PIN_1
 #define LR_D_FB_GPIO_Port GPIOA
-#define RR_U_FB_Pin GPIO_PIN_2 //RR_U
-#define RR_U_FB_GPIO_Port GPIOA //RR_U
-#define RR_D_FB_Pin GPIO_PIN_3 // RR_D
-#define RR_D_FB_GPIO_Port GPIOA // RR_D
+#define RR_U_FB_Pin GPIO_PIN_2 
+#define RR_U_FB_GPIO_Port GPIOA 
+#define RR_D_FB_Pin GPIO_PIN_3 
+#define RR_D_FB_GPIO_Port GPIOA 
 #define LF_U_FB_Pin GPIO_PIN_4
 #define LF_U_FB_GPIO_Port GPIOA
 #define LF_D_FB_Pin GPIO_PIN_5
 #define LF_D_FB_GPIO_Port GPIOA
-#define RF_U_FB_Pin GPIO_PIN_6 //RF_U
-#define RF_U_FB_GPIO_Port GPIOA //RF_U
-#define RF_D_FB_Pin GPIO_PIN_7 //RF_D
-#define RF_D_FB_GPIO_Port GPIOA //RF_U
+#define RF_U_FB_Pin GPIO_PIN_6 
+#define RF_U_FB_GPIO_Port GPIOA 
+#define RF_D_FB_Pin GPIO_PIN_7 
+#define RF_D_FB_GPIO_Port GPIOA 
 #define LF_U_Pin GPIO_PIN_0
 #define LF_U_GPIO_Port GPIOB
 #define LF_D_Pin GPIO_PIN_1

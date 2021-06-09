@@ -5,13 +5,14 @@
 #include "encoder.h"
 
 #define MAX_WINDOWS 4
-#define SENSE_LIMIT 1590 // 12 bit ADC, max value 4095
-#define MAX_COUNT 6
+#define SENSE_LIMIT 1100 // 12 bit ADC, max value 4095
+#define MAX_COUNT 6550
 
 
 uint32_t motorCurrent[8];
 uint8_t stageState;
 uint8_t stageNextState;
+
 
 
 typedef struct windowHandle

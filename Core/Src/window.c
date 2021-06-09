@@ -18,6 +18,7 @@ void windowInit(void)
     }
     stageState = ready;
     stageNextState = 0;
+    
 }
 
 void windowHandler(void)
@@ -37,7 +38,7 @@ void stateHandler(void)
     window[lr].sense_D = motorCurrent[1];
     window[rr].sense_U = motorCurrent[2];
     window[rr].sense_D = motorCurrent[3];
-    window[lf].sense_U = motorCurrent[4];
+    window[lf].sense_U = motorCurrent[4]; // works lf down
     window[lf].sense_D = motorCurrent[5];
     window[rf].sense_U = motorCurrent[6];
     window[rf].sense_D = motorCurrent[7];
@@ -48,15 +49,15 @@ void stateHandler(void)
         {
             window[i].senseCount_U++;
         }
-        else if (window[i].sense_U < SENSE_LIMIT)
+        if (window[i].sense_U < SENSE_LIMIT)
         {
             window[i].senseCount_U = 0;
         }
-        else if (window[i].sense_D >= SENSE_LIMIT)
+        if (window[i].sense_D >= SENSE_LIMIT)
         {
             window[i].senseCount_D++;
         }
-        else if (window[i].sense_D < SENSE_LIMIT)
+        if (window[i].sense_D < SENSE_LIMIT)
         {
             window[i].senseCount_D = 0;
         }
@@ -173,6 +174,7 @@ void eventHandler(void)
                 window[lf].state = up;
                 window[rf].state = up;
                 break;
+
             case SWIPE_DOWN:
                 window[lf].state = down;
                 window[rf].state = down;
@@ -185,15 +187,11 @@ void eventHandler(void)
             switch (te.swipe)
             {
             case SWIPE_UP:
-                //stageState = all_up;
-                window[lr].state = up;
-                window[rr].state = up;
+                stageState = all_up;
                 break;
+                
             case SWIPE_DOWN:
-                //stageState = all_down;
-                window[lr].state = down;
-                window[rr].state = down;
-
+                stageState = all_down;
                 break;
             default:
                 break;
