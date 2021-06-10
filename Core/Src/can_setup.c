@@ -29,12 +29,12 @@ void canSettings(void)
 
     // EXAMPLE FROM https://community.st.com/s/question/0D50X0000APYsgG/can-setup-and-filters-using-hal
     data.FilterBank = 0;
-    data.FilterMode = CAN_FILTERMODE_IDLIST; //CAN_FILTERMODE_IDLIST;
+    data.FilterMode = CAN_FILTERMODE_IDLIST; 
     data.FilterScale = CAN_FILTERSCALE_32BIT;
-    data.FilterIdLow = ((DATA <<3) & 0xFFF8) | 4; // THIS is the tricky part  //0xffff;
-    data.FilterIdHigh = (DATA >>13) & 0xFFFF; // THIS is the tricky part  //0x1fff;
-    data.FilterMaskIdLow = ((EVENT <<3) & 0xFFF8) | 4; // THIS is the tricky part//0xffff;
-    data.FilterMaskIdHigh = (EVENT >>13) & 0xFFFF; // THIS is the tricky part//0x1fff;
+    data.FilterIdLow = ((DATA <<3) & 0xFFF8) | 4; 
+    data.FilterIdHigh = (DATA >>13) & 0xFFFF; 
+    data.FilterMaskIdLow = ((EVENT <<3) & 0xFFF8) | 4; 
+    data.FilterMaskIdHigh = (EVENT >>13) & 0xFFFF; 
     data.FilterFIFOAssignment = CAN_RX_FIFO0;
     data.SlaveStartFilterBank = 0;
     data.FilterActivation = ENABLE;
@@ -42,22 +42,7 @@ void canSettings(void)
     {
         Error_Handler();
     }
-    /*
-    event.FilterBank = 1;
-    event.FilterMode = CAN_FILTERMODE_IDLIST; //CAN_FILTERMODE_IDLIST;
-    event.FilterScale = CAN_FILTERSCALE_32BIT;
-    event.FilterIdLow = ((EVENT <<3) & 0xFFF8) | 4; // THIS is the tricky part//0xffff;
-    event.FilterIdHigh = (EVENT >>13) & 0xFFFF; // THIS is the tricky part//0x1fff;
-    event.FilterMaskIdLow = 0xFFFC;//0x0000;
-    event.FilterMaskIdHigh = 0xFFFF;//0x0000;
-    event.FilterFIFOAssignment = CAN_RX_FIFO0;
-    event.SlaveStartFilterBank = 0;
-    event.FilterActivation = ENABLE;
-    if (HAL_CAN_ConfigFilter(&hcan, &event) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    */
+
 
     if (HAL_CAN_Start(&hcan) != HAL_OK)
     {
